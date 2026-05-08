@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-Hant"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error": "#ba1a1a",
+                    "secondary-fixed": "#ffdeac",
+                    "on-background": "#1a1c1b",
+                    "tertiary-fixed-dim": "#ccc6b8",
+                    "tertiary-container": "#48443a",
+                    "on-surface-variant": "#424844",
+                    "primary": "#163328",
+                    "tertiary-fixed": "#e9e2d4",
+                    "surface-dim": "#dadad8",
+                    "primary-container": "#2d4a3e",
+                    "on-secondary-fixed": "#281900",
+                    "on-surface": "#1a1c1b",
+                    "on-secondary-container": "#785e33",
+                    "outline": "#727974",
+                    "background": "#faf9f7",
+                    "on-tertiary-container": "#b7b1a4",
+                    "primary-fixed": "#c9ead9",
+                    "on-secondary-fixed-variant": "#5a431a",
+                    "secondary": "#745a2f",
+                    "inverse-surface": "#2f312f",
+                    "on-error-container": "#93000a",
+                    "surface-tint": "#476558",
+                    "surface-variant": "#e3e2e0",
+                    "tertiary": "#312e25",
+                    "on-primary-fixed-variant": "#304d40",
+                    "on-secondary": "#ffffff",
+                    "surface-container": "#eeeeeb",
+                    "surface-bright": "#faf9f7",
+                    "on-primary-fixed": "#022016",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#f1f1ee",
+                    "primary-fixed-dim": "#adcebe",
+                    "surface-container-high": "#e9e8e6",
+                    "outline-variant": "#c1c8c3",
+                    "on-tertiary-fixed": "#1e1b13",
+                    "on-tertiary-fixed-variant": "#4a473c",
+                    "surface-container-highest": "#e3e2e0",
+                    "secondary-container": "#fedaa4",
+                    "error-container": "#ffdad6",
+                    "surface": "#faf9f7",
+                    "surface-container-low": "#f4f3f1",
+                    "secondary-fixed-dim": "#e3c18d",
+                    "on-error": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "inverse-primary": "#adcebe",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-container": "#99b9a9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "element-gap": "24px",
+                    "section-padding": "120px",
+                    "unit": "8px",
+                    "gutter": "32px",
+                    "container-max": "1200px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Playfair Display"],
+                    "label-sm": ["Inter"],
+                    "headline-lg": ["Playfair Display"],
+                    "display-xl": ["Playfair Display"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "body-lg": ["1.125rem", {"lineHeight": "1.8", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "headline-md": ["2rem", {"lineHeight": "1.3", "fontWeight": "400"}],
+                    "label-sm": ["0.75rem", {"lineHeight": "1.4", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                    "headline-lg": ["3rem", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "display-xl": ["4.5rem", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "body-md": ["1rem", {"lineHeight": "1.7", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .antique-gold-divider {
+            height: 1px;
+            background-color: #B89968;
+            opacity: 0.3;
+        }
+        .soft-elevation {
+            box-shadow: 0 10px 40px -10px rgba(22, 51, 40, 0.08);
+        }
+        input:focus {
+            outline: none !important;
+            border-bottom: 2px solid #B89968 !important;
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-surface antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-gutter py-unit max-w-container-max mx-auto bg-background/90 backdrop-blur-md border-b border-secondary/20">
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2" href="#">
+<span class="material-symbols-outlined">west</span>
+            回首頁
+        </a>
+<div class="absolute left-1/2 -translate-x-1/2 text-headline-md font-headline-md tracking-widest text-primary">
+            森息日常
+        </div>
+<div class="flex items-center gap-gutter">
+<div class="hidden md:flex gap-gutter">
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-sm font-label-sm" href="#">Shop</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-sm font-label-sm" href="#">Rituals</a>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer">search</span>
+<span class="material-symbols-outlined text-primary cursor-pointer">shopping_bag</span>
+</div>
+</div>
+</nav>
+<!-- Hero Greeting Section -->
+<header class="mt-20 pt-16 pb-12 px-gutter bg-[#f4f1ea] relative overflow-hidden">
+<div class="max-w-container-max mx-auto relative z-10 flex flex-col items-center text-center">
+<h1 class="text-headline-lg font-headline-lg text-primary mb-4">歡迎回到森息日常 / 加入我們</h1>
+<p class="text-body-lg font-body-lg text-secondary italic">讓每一次採購都成為你的能量儀式</p>
+</div>
+<!-- Decorative Herb Illustration Placeholder -->
+<div class="absolute top-0 right-0 h-full w-1/4 opacity-20 pointer-events-none">
+<img class="h-full w-full object-cover" data-alt="A detailed hand-drawn style botanical illustration of dried sage and lavender sprigs. The image has a soft parchment background, mimicking a classic herbarium page with delicate ink lines and subtle earthy tones of moss and cream, creating a serene and mystical atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1eRZdjZPr7vGMicBR2sUvYIRDmWmF4XLzFDnFlflC2HD4sH8R2JOfMk4k6d3FzL6EaPRIdH_Vs4qsGxdiyb2_HDe2rhbHS4xG5oDh3xMR_9BR64076vnzUNmtVlksbB47bDx2tRbhtXGh2yYsHEv4ockGYUnZ4cNxDhmaApH0xPBkDc31N-Zwn3ybKwn9hKEKYKXyE6r7cqMz1E9tk9jI9v9eElDk7Ll-LceMupz2ZNLfh26YkGbtdisMUsdOGCReAlQXnUTnk_x9"/>
+</div>
+<div class="absolute top-0 left-0 h-full w-1/4 opacity-20 pointer-events-none transform -scale-x-100">
+<img class="h-full w-full object-cover" data-alt="Intricate botanical sketch of a rosemary branch and medicinal herbs on a warm, textured beige paper. The visual style is archival and editorial, using thin charcoal-like strokes and soft watercolor washes of muted green and terracotta to evoke a sense of ancient wisdom and nature-inspired luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOCnh_rQtglybhElN1_j09rbdL7IfJiAZ1pQ48T9F44TRye9C4NuQBBYz_NPnFQsJlYeYp6dEi3kPt5e8yGN9MY0vTAPzqpl8HdrFJCaIWsv7ujL99xxf4mm1rhexVWnkzPDEyjdudUuRruii3K-s4O_LOYakCBqO2F06k6EWWmMdpGfQH2M4yWibCH5eHzM_0sXOlZH7YDZfvjHn1qiv4p8Bz7HuD5w8cHq86viS3Jfw9z2W1_DP-CShodqDNGz8quJ2Kj3hgsQVM"/>
+</div>
+</header>
+<!-- Dual Auth Layout -->
+<main class="py-section-padding px-gutter max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+<!-- LEFT CARD (Login) -->
+<section class="bg-surface-container-lowest p-10 rounded-xl soft-elevation border border-secondary/10">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-primary text-3xl">eco</span>
+<h2 class="text-headline-md font-headline-md text-primary">歡迎回來</h2>
+</div>
+<form class="space-y-8">
+<div class="group">
+<label class="block text-label-sm font-label-sm text-secondary mb-2">電子郵件 Email</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-3 px-0 focus:ring-0 transition-all text-body-md" placeholder="example@forestbreath.com" type="email"/>
+</div>
+<div class="group relative">
+<label class="block text-label-sm font-label-sm text-secondary mb-2">密碼 Password</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-3 px-0 focus:ring-0 transition-all text-body-md" placeholder="••••••••" type="password"/>
+<button class="absolute right-0 bottom-3 text-secondary-fixed-variant" type="button">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+<div class="flex items-center justify-between">
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="rounded border-secondary text-primary focus:ring-primary w-4 h-4" type="checkbox"/>
+<span class="text-label-sm font-label-sm text-on-surface-variant">記住我</span>
+</label>
+<a class="text-label-sm font-label-sm text-secondary hover:underline" href="#">忘記密碼？</a>
+</div>
+<button class="w-full bg-primary text-white py-4 rounded-lg font-bold tracking-widest hover:opacity-90 transition-all active:scale-95 shadow-lg shadow-primary/10">
+                        登入
+                    </button>
+</form>
+<div class="mt-10">
+<div class="relative flex py-5 items-center">
+<div class="flex-grow border-t border-outline-variant"></div>
+<span class="flex-shrink mx-4 text-label-sm font-label-sm text-on-surface-variant">社群登入</span>
+<div class="flex-grow border-t border-outline-variant"></div>
+</div>
+<div class="grid grid-cols-3 gap-4 mt-6">
+<button class="flex items-center justify-center py-3 border border-outline-variant rounded-lg hover:bg-surface-container transition-colors">
+<img alt="LINE" class="w-6 h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGT3SzFWYSnkH3i_GstuT3zCfDppdMNDA6YK54-wH1r5JwJ9pv1n34NcRYc5Z3VWeQHIR3yABEfXss4x5BdTp2zJMZIPOJAlFk9-RGyvC7G4KWRcoCQi1xQ70uLF-LQYzeuI-E4ZvnivLqWPlxrXkwoRxXWcFfxIfzdjeN8VLe0s-n9zpcErGer61rBBSfX1FNmSd3F5Bwq42iRZKUAPxgMj562vE_5Q1xb-DGN51qrz8RXF45Nv1H3mX06lW525wEhIkbsv4CK17b"/>
+</button>
+<button class="flex items-center justify-center py-3 border border-outline-variant rounded-lg hover:bg-surface-container transition-colors">
+<img alt="Google" class="w-6 h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXQcw14pEOkabscQqlQeypgtSs4XuIpp6pfAhDgzg3cXxzOEiXEldT55dusrzoeG1MY7rY-02FVg73-m8fs4HjDlYGFLE10AVRvXLSR1iOsI9jpJY4VoJcMVgT0cld5ajRHJs4zhSE1af0nG2OmfTZ4uhbGWveiWTERCZWpLPmwALX6mG_JMrCX7PbCws8-FMRl4S4nSRUx_95U_wZbJ5lXUxE6_tduJKS7cwr006usXGVB1QnoHis1Ll0jra6Xz5AL7ulDi279z4Y"/>
+</button>
+<button class="flex items-center justify-center py-3 border border-outline-variant rounded-lg hover:bg-surface-container transition-colors">
+<img alt="FB" class="w-6 h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBy7KU2DrJywq7JehUCHIvvEdK5Uj6MkcUDNU-kXdGMsWId1fRZTShVW9aSK41nx7WXrIo9xIIIY_CXz17mG1NKuidhf8Fzh2z_OmvgEfho0aDbT_rlqygyZNdlGTweKu9ASCVfq1Ic4JGOG1qJfb7H97XP5VX5iKw-XGYUleu54uk4dhu6cFceZzCB3wGDW0wU_hsuP5Q5zVXD84bIesoqiqQh25A-ayuQsz6rncHjJr-7a0Seanm7zVU20r8YuWpBQBB-q-H9wikR"/>
+</button>
+</div>
+</div>
+<p class="mt-8 text-center text-body-md text-on-surface-variant">
+                    尚無帳號？ <a class="text-primary font-bold hover:underline" href="#">立即註冊 →</a>
+</p>
+</section>
+<!-- RIGHT CARD (Register) -->
+<section class="bg-surface-container-lowest p-10 rounded-xl soft-elevation border border-secondary/10 border-l-4 border-l-secondary">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-secondary text-3xl">psychiatry</span>
+<h2 class="text-headline-md font-headline-md text-primary">成為森息會員</h2>
+</div>
+<div class="bg-[#fcfaf7] p-6 rounded-lg mb-8 space-y-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="text-body-md text-on-surface-variant">首購 9 折優惠碼</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="text-body-md text-on-surface-variant">生日禮：免費能量草杖一支</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="text-body-md text-on-surface-variant">每月新月儀式專屬推薦</span>
+</div>
+</div>
+<form class="space-y-6">
+<div class="grid grid-cols-2 gap-6">
+<div>
+<label class="block text-label-sm font-label-sm text-secondary mb-1">稱呼 Name</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-2 px-0 focus:ring-0 text-body-md" placeholder="您如何稱呼" type="text"/>
+</div>
+<div>
+<label class="block text-label-sm font-label-sm text-secondary mb-1">生日 Birthday</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-2 px-0 focus:ring-0 text-body-md" type="date"/>
+</div>
+</div>
+<div>
+<label class="block text-label-sm font-label-sm text-secondary mb-1">電子郵件 Email</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-2 px-0 focus:ring-0 text-body-md" placeholder="your@email.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="block text-label-sm font-label-sm text-secondary mb-1">密碼 Password</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-2 px-0 focus:ring-0 text-body-md" placeholder="建立安全密碼" type="password"/>
+<div class="h-1 w-full bg-surface-container flex gap-1">
+<div class="h-full w-1/3 bg-secondary opacity-30"></div>
+<div class="h-full w-1/3 bg-surface-variant"></div>
+<div class="h-full w-1/3 bg-surface-variant"></div>
+</div>
+<p class="text-[10px] text-on-surface-variant italic">雙魚 ♓ (將自動填入您的能量測試)</p>
+</div>
+<div class="space-y-3 pt-2">
+<label class="flex items-start gap-2 cursor-pointer">
+<input class="mt-1 rounded border-secondary text-secondary focus:ring-secondary w-4 h-4" type="checkbox"/>
+<span class="text-label-sm font-label-sm text-on-surface-variant leading-relaxed">我已閱讀並同意 服務條款 與 隱私權政策</span>
+</label>
+<label class="flex items-start gap-2 cursor-pointer">
+<input checked="" class="mt-1 rounded border-secondary text-secondary focus:ring-secondary w-4 h-4" type="checkbox"/>
+<span class="text-label-sm font-label-sm text-on-surface-variant leading-relaxed">訂閱能量報：接收月相儀式、新品折扣與草本知識</span>
+</label>
+</div>
+<button class="w-full bg-secondary text-white py-4 rounded-lg font-bold tracking-widest hover:opacity-90 transition-all active:scale-95 shadow-lg shadow-secondary/10">
+                        註冊並開始能量旅程
+                    </button>
+</form>
+<p class="mt-8 text-center text-body-md text-on-surface-variant">
+                    已有帳號？ <a class="text-secondary font-bold hover:underline" href="#">回到登入 →</a>
+</p>
+</section>
+</div>
+</main>
+<!-- Trust Section -->
+<section class="bg-surface-container-low py-16 px-gutter border-y border-secondary/10">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+<div class="flex flex-col items-center gap-3">
+<span class="material-symbols-outlined text-primary text-4xl">verified_user</span>
+<p class="text-body-md font-bold text-primary">🌿 採用 SSL 加密保護</p>
+<p class="text-label-sm text-on-surface-variant">保障您的交易與隱私安全無虞</p>
+</div>
+<div class="flex flex-col items-center gap-3">
+<span class="material-symbols-outlined text-primary text-4xl">lock</span>
+<p class="text-body-md font-bold text-primary">🔒 不會分享您的個資</p>
+<p class="text-label-sm text-on-surface-variant">嚴謹遵守資料保護規範，絕不挪作他用</p>
+</div>
+<div class="flex flex-col items-center gap-3">
+<span class="material-symbols-outlined text-primary text-4xl">mail_lock</span>
+<p class="text-body-md font-bold text-primary">✉️ 隨時可取消訂閱</p>
+<p class="text-label-sm text-on-surface-variant">尊重您的信箱空間，隨時能變更通知設定</p>
+</div>
+</div>
+</section>
+<!-- Why Join Us Section -->
+<section class="py-section-padding px-gutter max-w-container-max mx-auto">
+<h3 class="text-headline-md font-headline-md text-primary text-center mb-16">為什麼加入森息日常？</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-element-gap">
+<div class="text-center group">
+<div class="w-24 h-24 mx-auto mb-6 rounded-full bg-primary-fixed flex items-center justify-center group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-primary text-4xl" data-weight="fill">magic_button</span>
+</div>
+<h4 class="text-body-lg font-bold text-primary mb-3">專屬能量推薦</h4>
+<p class="text-body-md text-on-surface-variant">根據您的星盤與近期狀態，推薦最適合的植物能量產品。</p>
+</div>
+<div class="text-center group">
+<div class="w-24 h-24 mx-auto mb-6 rounded-full bg-primary-fixed flex items-center justify-center group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-primary text-4xl" data-weight="fill">new_releases</span>
+</div>
+<h4 class="text-body-lg font-bold text-primary mb-3">優先取得新品</h4>
+<p class="text-body-md text-on-surface-variant">限量版儀式組與珍稀草藥，會員享有提早 48 小時預購權。</p>
+</div>
+<div class="text-center group">
+<div class="w-24 h-24 mx-auto mb-6 rounded-full bg-primary-fixed flex items-center justify-center group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-primary text-4xl" data-weight="fill">history_edu</span>
+</div>
+<h4 class="text-body-lg font-bold text-primary mb-3">保存能量測試紀錄</h4>
+<p class="text-body-md text-on-surface-variant">完整追蹤您的能量流動歷史，見證身心靈的蛻變旅程。</p>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-section-padding px-gutter flex flex-col items-center gap-element-gap text-center bg-surface-container-low border-t border-secondary/10">
+<div class="text-headline-sm font-headline-sm text-primary">森息日常</div>
+<div class="flex flex-wrap justify-center gap-gutter text-label-sm font-label-sm text-on-surface-variant">
+<a class="hover:text-secondary transition-colors duration-200" href="#">服務條款</a>
+<a class="hover:text-secondary transition-colors duration-200" href="#">隱私政策</a>
+<a class="hover:text-secondary transition-colors duration-200" href="#">聯絡客服</a>
+<a class="hover:text-secondary transition-colors duration-200" href="#">Sustainability</a>
+<a class="hover:text-secondary transition-colors duration-200" href="#">Retailers</a>
+</div>
+<div class="antique-gold-divider w-24"></div>
+<p class="text-label-sm font-label-sm text-on-surface-variant">
+            © 2024 森息日常 Forest Breath Daily. All rights reserved.
+        </p>
+</footer>
+</body></html>

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-TW"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&amp;family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>body {
+    background-color: #fbf9f4;
+    /* background color from theme */
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCoxkvOnwJotuWWEhTQLbitZrHsQ-pHuLqe3siZwkNIEqv0A3QUEg66JDH1gxv5tPVEblKJwycnj3TIsCivpBDtVDASLbJJD6oJWyrtgTWzEdV0LQFi-JXwROO4rOUYGEVc-9nyUR0SUExwPlIGnre9dVZsK1dAL3SBZ166Ok19iDzzbHEDDaxtsJ8sewMdrn_QWeCWJ8aDblE0KsXbPu0WYnKEEfSah0gQCcM4KZ67tnS3lqydq2fAMYmSKAmA9hVFchLGLf33quaU);
+    background-blend-mode: multiply
+    }
+.organic-blob {
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%
+    }
+.custom-checkbox:checked {
+    background-color: #445331;
+    border-color: #445331
+    }</style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-container": "#71654a",
+                      "on-secondary-fixed": "#360f00",
+                      "error": "#ba1a1a",
+                      "error-container": "#ffdad6",
+                      "outline-variant": "#c6c8bb",
+                      "on-surface-variant": "#45483f",
+                      "on-tertiary-fixed": "#231b06",
+                      "on-secondary": "#ffffff",
+                      "tertiary-fixed-dim": "#d5c5a5",
+                      "tertiary-fixed": "#f2e1c0",
+                      "primary-fixed": "#d8e9bc",
+                      "inverse-surface": "#30312d",
+                      "background": "#fbf9f4",
+                      "surface-bright": "#fbf9f4",
+                      "primary-fixed-dim": "#bccda1",
+                      "tertiary": "#584d34",
+                      "on-secondary-fixed-variant": "#71361c",
+                      "on-primary-container": "#daebbe",
+                      "surface-container-highest": "#e4e2dd",
+                      "on-secondary-container": "#793c21",
+                      "on-error-container": "#93000a",
+                      "primary-container": "#5c6b47",
+                      "on-tertiary": "#ffffff",
+                      "surface-dim": "#dcdad5",
+                      "on-tertiary-fixed-variant": "#50462d",
+                      "secondary": "#8e4d31",
+                      "surface-container-high": "#eae8e3",
+                      "surface-container": "#f0eee8",
+                      "on-primary-fixed": "#131f04",
+                      "on-background": "#1b1c19",
+                      "secondary-fixed-dim": "#ffb597",
+                      "surface-container-lowest": "#ffffff",
+                      "inverse-on-surface": "#f3f1eb",
+                      "surface-container-low": "#f5f3ee",
+                      "secondary-fixed": "#ffdbcd",
+                      "on-surface": "#1b1c19",
+                      "on-error": "#ffffff",
+                      "surface": "#fbf9f4",
+                      "secondary-container": "#feaa87",
+                      "on-tertiary-container": "#f4e3c2",
+                      "surface-variant": "#e4e2dd",
+                      "inverse-primary": "#bccda1",
+                      "surface-tint": "#546340",
+                      "on-primary-fixed-variant": "#3d4b2a",
+                      "on-primary": "#ffffff",
+                      "outline": "#76786e",
+                      "primary": "#445331"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "lg": "24px",
+                      "xl": "40px",
+                      "unit": "4px",
+                      "xxl": "64px",
+                      "gutter": "24px",
+                      "md": "16px",
+                      "sm": "8px",
+                      "container-max": "1280px",
+                      "xs": "4px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Outfit"],
+                      "display-lg": ["Outfit"],
+                      "accent-note": ["cursive"],
+                      "body-md": ["DM Sans"],
+                      "display-md": ["Outfit"],
+                      "body-lg": ["DM Sans"],
+                      "label-sm": ["DM Sans"],
+                      "headline-lg": ["Outfit"]
+              },
+              "fontSize": {
+                      "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                      "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                      "accent-note": ["20px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "display-md": ["36px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-sm": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                      "headline-lg": ["28px", {"lineHeight": "1.3", "fontWeight": "500"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background">
+<!-- Top Announcement Bar -->
+<div class="w-full bg-primary-container text-on-primary-container py-xs text-center font-label-sm text-label-sm">
+        全店滿 NT$1,500 免運費，手作草杖現貨供應中
+    </div>
+<!-- TopNavBar (Shared Component) -->
+<header class="bg-surface dark:bg-surface-dim dock full-width top-0 sticky z-50 shadow-sm opacity-95 border-b border-secondary dark:border-secondary-container">
+<div class="flex justify-between items-center w-full px-lg max-w-container-max mx-auto py-sm">
+<div class="font-display-md text-display-md text-primary dark:text-primary-fixed tracking-tight">森息日常</div>
+<nav class="hidden md:flex gap-lg items-center font-body-md text-body-md">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">全部商品</a>
+<a class="text-secondary dark:text-secondary-fixed font-bold border-b-2 border-secondary" href="#">草本系列</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">水晶系列</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">能量草杖</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">關於我們</a>
+</nav>
+<div class="flex items-center gap-md">
+<button class="material-symbols-outlined text-primary scale-95 transition-transform duration-150" data-icon="search">search</button>
+<button class="material-symbols-outlined text-primary scale-95 transition-transform duration-150" data-icon="shopping_cart">shopping_cart</button>
+<button class="md:hidden material-symbols-outlined text-primary" data-icon="menu">menu</button>
+</div>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-lg pt-xl pb-xxl">
+<!-- Breadcrumb -->
+<nav aria-label="Breadcrumb" class="flex mb-lg font-body-md text-body-md text-primary">
+<ol class="flex list-none p-0">
+<li class="flex items-center">
+<a class="hover:underline" href="#">首頁</a>
+<span class="material-symbols-outlined mx-xs text-sm" data-icon="chevron_right">chevron_right</span>
+</li>
+<li class="flex items-center">
+<a class="hover:underline" href="#">全部商品</a>
+<span class="material-symbols-outlined mx-xs text-sm" data-icon="chevron_right">chevron_right</span>
+</li>
+<li class="font-bold">能量草杖系列</li>
+</ol>
+</nav>
+<!-- Page Header -->
+<div class="relative mb-xxl">
+<div class="absolute -top-12 -left-12 w-64 h-64 bg-primary/10 organic-blob -z-10 blur-xl"></div>
+<div class="max-w-2xl">
+<h1 class="font-display-lg text-display-lg text-primary mb-md">能量草杖系列</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-sm">9 款薰衣草為基底的複方手作草杖，每款對應不同情境與心境</p>
+<p class="font-label-sm text-label-sm text-primary/70 uppercase tracking-widest">全部商品手工製作，每批次少量生產</p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-xl items-start">
+<!-- Filters Sidebar -->
+<aside class="sticky top-24 space-y-xl">
+<div class="bg-surface-container-low p-lg rounded-xl">
+<h3 class="font-headline-md text-headline-md text-primary mb-md">篩選情境</h3>
+<div class="space-y-sm">
+<label class="flex items-center gap-sm font-body-md text-body-md cursor-pointer group">
+<input class="w-5 h-5 rounded-sm border-outline text-primary focus:ring-primary custom-checkbox" type="checkbox"/>
+<span class="group-hover:text-primary">淨化空間</span>
+</label>
+<label class="flex items-center gap-sm font-body-md text-body-md cursor-pointer group">
+<input checked="" class="w-5 h-5 rounded-sm border-outline text-primary focus:ring-primary custom-checkbox" type="checkbox"/>
+<span class="group-hover:text-primary">安穩睡眠</span>
+</label>
+<label class="flex items-center gap-sm font-body-md text-body-md cursor-pointer group">
+<input class="w-5 h-5 rounded-sm border-outline text-primary focus:ring-primary custom-checkbox" type="checkbox"/>
+<span class="group-hover:text-primary">冥想專注</span>
+</label>
+<label class="flex items-center gap-sm font-body-md text-body-md cursor-pointer group">
+<input class="w-5 h-5 rounded-sm border-outline text-primary focus:ring-primary custom-checkbox" type="checkbox"/>
+<span class="group-hover:text-primary">情緒平復</span>
+</label>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mt-xl mb-md">對應屬性</h3>
+<div class="flex flex-wrap gap-xs">
+<button class="px-sm py-xs bg-surface-container-highest rounded-lg font-label-sm text-label-sm hover:bg-primary-fixed transition-colors">草本</button>
+<button class="px-sm py-xs bg-surface-container-highest rounded-lg font-label-sm text-label-sm hover:bg-primary-fixed transition-colors">花香</button>
+<button class="px-sm py-xs bg-surface-container-highest rounded-lg font-label-sm text-label-sm hover:bg-primary-fixed transition-colors">木質</button>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-lg rounded-xl border border-outline-variant shadow-sm text-center">
+<span class="material-symbols-outlined text-secondary text-4xl mb-md" data-icon="eco">eco</span>
+<h4 class="font-headline-md text-headline-md text-primary mb-sm">工藝精神</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">我們堅持使用在自然中乾燥的有機植物，不添加任何人工香精，讓大地的療癒力真實流動。</p>
+</div>
+</aside>
+<!-- Product Grid -->
+<section>
+<div class="flex justify-between items-center mb-lg font-body-md text-body-md">
+<span class="text-on-surface-variant">顯示 9 件商品中的 1–9 件</span>
+<div class="flex items-center gap-sm">
+<label class="hidden md:block" for="sort">排序方式：</label>
+<select class="bg-transparent border-none focus:ring-0 font-bold text-primary cursor-pointer" id="sort">
+<option>預設排序</option>
+<option>價格由低到高</option>
+<option>價格由高到低</option>
+<option>最新商品</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-lg">
+<!-- Product Card 1 -->
+<div class="group bg-surface-container-lowest rounded-xl p-sm shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+<div class="relative overflow-hidden rounded-lg mb-md aspect-[4/5]">
+<img alt="Energy Smudge Wand" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A macro close-up of a handmade smudge wand composed of dried purple lavender stems, sage leaves, and a thin twine wrap. The lighting is soft and golden, highlighting the tactile textures of the botanical elements. The background is a warm, cream-colored artisan workshop with out-of-focus wooden tools. The overall mood is peaceful and high-end wellness boutique style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXk3Ox7eCHcugf5zMZP_939QAKW5SUqVr3iSC6oLmRegnAkeEpMaq7fPhTIDRIzWR-kf9sIXmvcIewMDQJGp4t3j25hc5rCNYKtSZ6qWoQTIhXtPY0RcczUp1etwRMWtWFhySy83EwNOHfBiYx44jwysBBE4AxGbf18XkNpJ2FT--tJ9GprlWf9sHsYQu3Qshqize3YeaZlRp7lqDs058TKuFRz9XgcGqJq8tYCLci8h_AVHBjhLhNx4K3S-HOOXMHFQgk5r5lLIRV"/>
+<div class="absolute top-sm right-sm bg-secondary text-on-secondary px-sm py-xs rounded-full font-label-sm text-label-sm">
+                                限定商品
+                            </div>
+</div>
+<div class="px-sm pb-md">
+<div class="text-primary/60 font-label-sm text-label-sm mb-xs">薰衣草 x 鼠尾草</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-sm">「晨曦清朗」能量草杖</h3>
+<div class="flex justify-between items-center">
+<span class="font-body-lg text-body-lg text-secondary font-bold">NT$ 580</span>
+<button class="flex items-center gap-xs font-label-sm text-label-sm text-primary hover:text-secondary transition-colors underline-offset-4 hover:underline">
+<span class="material-symbols-outlined text-md" data-icon="add_shopping_cart">add_shopping_cart</span>
+                                    加入購物車
+                                </button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group bg-surface-container-lowest rounded-xl p-sm shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 mt-lg md:mt-0">
+<div class="relative overflow-hidden rounded-lg mb-md aspect-[4/5]">
+<img alt="Artisan Herbs" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A professionally staged product shot of a dried smudge wand with yellow strawflowers and lavender bundled together. The wand rests on a piece of natural handmade paper with a visible grain texture. The lighting is directional and warm, creating soft, atmospheric shadows. The palette consists of moss greens, sand beiges, and deep earthy browns, reflecting a tactile and organic brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqf9QdY4f_rX5TPpTfVb4tCQksScTcxX2iy5a3_-1MePdFkCjm2uTBJOvBziUD6_119-CovuINdYQy-QiFE22lNut_lTNWFkd-vEH3cW5GGqSPvROAWZ2iQBPNWmQwE-PqM1bVcEGP9uVU_UOAnAOCgEp4pQSDHNrwUB6yGBeEBh1WhFBbmnjR32nATEe2Y18u1FOxftPRttSitKbd0SLv47EYuY1J220CTN_zblGhBNHxRsVu7EaoqPtrnetgU2rDCxO5so7mln1V"/>
+</div>
+<div class="px-sm pb-md">
+<div class="text-primary/60 font-label-sm text-label-sm mb-xs">薰衣草 x 雪松</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-sm">「森之呼吸」能量草杖</h3>
+<div class="flex justify-between items-center">
+<span class="font-body-lg text-body-lg text-secondary font-bold">NT$ 620</span>
+<button class="flex items-center gap-xs font-label-sm text-label-sm text-primary hover:text-secondary transition-colors underline-offset-4 hover:underline">
+<span class="material-symbols-outlined text-md" data-icon="add_shopping_cart">add_shopping_cart</span>
+                                    加入購物車
+                                </button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group bg-surface-container-lowest rounded-xl p-sm shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+<div class="relative overflow-hidden rounded-lg mb-md aspect-[4/5]">
+<img alt="Botanical Wand" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Close-up of three different bundles of dried cleansing herbs tied with brown hemp string. The scene is shot on a rustic wooden table with scattered dried petals. The lighting is high-key and natural, highlighting the vibrant muted greens and purples of the herbs. The aesthetic is centered around approachable luxury and artisan integrity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPO0dLwFKkzHa12CByf4jlqoOVYfNH32RtqZLeNb3YJBRFDN2JMyCtW0VRspzu7KXdDAiX9z9nnix5Ng_che0EtOQpGZyUhXr9LC3rbI-2SPxtnT_gkoy3kwjWNzyoQNVnLro69oCj3gz-NCoeFniIWC0rZnSU_2LyjrJD70cU18WfQYOhI8X6QNmRbhoV7ermq9Nn8YVI113H1cy80M1xW5sZAeCD4JVsAxPBiy8v-h6v8lji2Sn2-M5XygnYojUSOMF6f4y4FYIt"/>
+<div class="absolute top-sm right-sm bg-primary text-on-primary px-sm py-xs rounded-full font-label-sm text-label-sm">
+                                銷售排行 No.1
+                            </div>
+</div>
+<div class="px-sm pb-md">
+<div class="text-primary/60 font-label-sm text-label-sm mb-xs">薰衣草 x 玫瑰</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-sm">「月光溫柔」能量草杖</h3>
+<div class="flex justify-between items-center">
+<span class="font-body-lg text-body-lg text-secondary font-bold">NT$ 550</span>
+<button class="flex items-center gap-xs font-label-sm text-label-sm text-primary hover:text-secondary transition-colors underline-offset-4 hover:underline">
+<span class="material-symbols-outlined text-md" data-icon="add_shopping_cart">add_shopping_cart</span>
+                                    加入購物車
+                                </button>
+</div>
+</div>
+</div>
+<!-- Row 2 -->
+<!-- Product Card 4 -->
+<div class="group bg-surface-container-lowest rounded-xl p-sm shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 mt-lg">
+<div class="relative overflow-hidden rounded-lg mb-md aspect-[4/5]">
+<img alt="Handmade Product" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Artisanal smudge wands lying on a parchment-like surface. Each wand is meticulously wrapped with botanical details. The image captures the 'Slow Craft' movement with human-centric imperfections. Warm, diffused lighting fills the frame, creating a serene and intentional feeling. The palette uses earth-centric colors like clay and moss green." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3A02tgqi7Llsvi7zil9c2mOTxEGCPOJ5p0Sa6gsV0O5dPMDt1e8AzV2KCfVr3fDkhSI34bm0xPJC8-fIBV4afpY0BFTGNku8trdEYr0ewGWXON5YsYyzXxikgrnEqHT0ZUn16ZLW9UpSAr_JDQE83ZxVYjPjfuEGfXGatCZWohVPWEabeTBSszPi7aGcxVS39HVZ2swd3Dr-9JrUv9oXTcL8_kClGhmn5d9sYYFVPVXoSIlG2hNimsunzvZVATjV8sop5mhwaT7v1"/>
+</div>
+<div class="px-sm pb-md">
+<div class="text-primary/60 font-label-sm text-label-sm mb-xs">薰衣草 x 迷迭香</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-sm">「靈感湧現」能量草杖</h3>
+<div class="flex justify-between items-center">
+<span class="font-body-lg text-body-lg text-secondary font-bold">NT$ 480</span>
+<button class="flex items-center gap-xs font-label-sm text-label-sm text-primary hover:text-secondary transition-colors underline-offset-4 hover:underline">
+<span class="material-symbols-outlined text-md" data-icon="add_shopping_cart">add_shopping_cart</span>
+                                    加入購物車
+                                </button>
+</div>
+</div>
+</div>
+<!-- Product Card 5 (Bento Style Variation) -->
+<div class="group bg-surface-container-lowest rounded-xl p-sm shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+<div class="relative overflow-hidden rounded-lg mb-md aspect-[4/5]">
+<img alt="Herbal Therapy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Macro photography of dried lavender flowers being bundled together by a pair of artisan hands. The hands are slightly out of focus, emphasizing the craftsmanship. The light is soft and atmospheric, creating a sense of uncontained natural space. The colors are derived from forest floors, with deep greens and warm browns dominating the scene." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQkvamIBP-b809Zo4WBKtpL7gKc3qZgKOniK0nibua0b7_LzLUc_ELvuJ81B82oMQ2g4su2_BPnnQQt5H5DtLgO61guaLR7vVlQbdkw2W3OSAwy_t0OYigVuz6T8sDgwxN-dbKYRpf5pGtwli66VbN_4iL0iavP83PFUdYgZ6Ro_7TGjooyCw4ACWS5bWR83GJl2p4RDC6YXjX7xlveX5p9s-q_I1OCqo5rWWfAk-FrKe_E0EJ4kMYcJGfcuPJGLdCIDl12IWFGqGk"/>
+</div>
+<div class="px-sm pb-md">
+<div class="text-primary/60 font-label-sm text-label-sm mb-xs">純淨薰衣草</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-sm">「純粹平靜」能量草杖</h3>
+<div class="flex justify-between items-center">
+<span class="font-body-lg text-body-lg text-secondary font-bold">NT$ 450</span>
+<button class="flex items-center gap-xs font-label-sm text-label-sm text-primary hover:text-secondary transition-colors underline-offset-4 hover:underline">
+<span class="material-symbols-outlined text-md" data-icon="add_shopping_cart">add_shopping_cart</span>
+                                    加入購物車
+                                </button>
+</div>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="group bg-surface-container-lowest rounded-xl p-sm shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 mt-lg">
+<div class="relative overflow-hidden rounded-lg mb-md aspect-[4/5]">
+<img alt="Wellness Smudge" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A minimalist composition of a single smudge wand with eucalyptus leaves and lavender. It is placed diagonally on a clay plate. The lighting creates subtle, long shadows that imply a late afternoon sun. The design direction is tactile and organic, avoiding clinical whites in favor of warm parchment tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZ2_wQ0Ni3eNr-ZK-dYoZSP8aOIQeOFE-0HSDlee1iwAtG1iIrbySZo-sGJEZnOkMMXpi8ZCbfeyn5qtMfL0b90uuuldbbDK4Xcdxfeu7zt7WQxrG5CDFfHnTloLFZBB1DZTWN0iCI4AvGmgAsXe2_nBeFpOrvQCPvWrJ7O69bEAjs_VJ2rJSgaMEDVEYLVwnAxLC2X-DPAi8oEQvWGX8cixZe8RCwu3tcc_BA_BcyOlEUCABCo-Y9BmQ8K5NBkLp7oU4HixzpI-wt"/>
+</div>
+<div class="px-sm pb-md">
+<div class="text-primary/60 font-label-sm text-label-sm mb-xs">薰衣草 x 尤加利</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-sm">「空間釋放」能量草杖</h3>
+<div class="flex justify-between items-center">
+<span class="font-body-lg text-body-lg text-secondary font-bold">NT$ 520</span>
+<button class="flex items-center gap-xs font-label-sm text-label-sm text-primary hover:text-secondary transition-colors underline-offset-4 hover:underline">
+<span class="material-symbols-outlined text-md" data-icon="add_shopping_cart">add_shopping_cart</span>
+                                    加入購物車
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Bento Style CTA / Info Section -->
+<div class="mt-xxl grid grid-cols-1 md:grid-cols-2 gap-lg">
+<div class="bg-primary text-on-primary p-xl rounded-xl flex flex-col justify-center relative overflow-hidden">
+<div class="absolute -bottom-10 -right-10 w-40 h-40 bg-on-primary/10 organic-blob"></div>
+<h3 class="font-display-md text-display-md mb-md">尋找命定香氣？</h3>
+<p class="font-body-lg text-body-lg mb-lg opacity-90">透過簡單的三分鐘測驗，發現最適合你當下心境的能量草杖組合。</p>
+<button class="bg-surface text-primary px-lg py-sm rounded-xl font-bold self-start hover:bg-primary-fixed transition-colors">
+                            開始測驗
+                        </button>
+</div>
+<div class="bg-surface-container p-xl rounded-xl border border-secondary/20">
+<div class="flex items-center gap-md mb-md">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="auto_awesome">auto_awesome</span>
+<h3 class="font-headline-lg text-headline-lg text-primary">正確使用草杖</h3>
+</div>
+<ul class="space-y-sm font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-start gap-xs"><span class="text-secondary">●</span> 以 45 度角點燃草杖頂端</li>
+<li class="flex items-start gap-xs"><span class="text-secondary">●</span> 輕輕扇動使其緩慢產生煙霧</li>
+<li class="flex items-start gap-xs"><span class="text-secondary">●</span> 帶著覺知走過空間角落</li>
+<li class="flex items-start gap-xs"><span class="text-secondary">●</span> 使用完畢請於沙盤或陶盤中壓熄</li>
+</ul>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-surface-container-low dark:bg-surface-container-highest w-full rounded-t-xl mt-xxl border-t border-outline-variant/30">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-lg px-lg py-xxl max-w-container-max mx-auto font-body-md text-body-md">
+<div class="col-span-2 md:col-span-1">
+<div class="font-display-lg text-display-lg text-primary mb-md">森息日常</div>
+<p class="text-on-surface-variant opacity-80">與大地同步呼吸，尋回內在的慢時光。</p>
+</div>
+<div class="flex flex-col gap-sm">
+<h4 class="font-bold text-primary mb-xs">探索系列</h4>
+<a class="text-on-surface-variant hover:text-secondary transition-colors underline-offset-4 hover:underline" href="#">全部商品</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors underline-offset-4 hover:underline" href="#">草本系列</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors underline-offset-4 hover:underline" href="#">水晶系列</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors underline-offset-4 hover:underline" href="#">能量草杖</a>
+</div>
+<div class="flex flex-col gap-sm">
+<h4 class="font-bold text-primary mb-xs">客戶服務</h4>
+<a class="text-on-surface-variant hover:text-secondary transition-colors underline-offset-4 hover:underline" href="#">客服支援</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors underline-offset-4 hover:underline" href="#">退換貨政策</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors underline-offset-4 hover:underline" href="#">聯絡我們</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors underline-offset-4 hover:underline" href="#">門市資訊</a>
+</div>
+<div class="flex flex-col gap-sm">
+<h4 class="font-bold text-primary mb-xs">品牌追蹤</h4>
+<a class="text-on-surface-variant hover:text-secondary transition-colors underline-offset-4 hover:underline" href="#">品牌故事</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors underline-offset-4 hover:underline" href="#">靈魂理念</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors underline-offset-4 hover:underline" href="#">Instagram</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors underline-offset-4 hover:underline" href="#">Facebook</a>
+</div>
+</div>
+<div class="w-full text-center py-lg border-t border-outline-variant/20 font-label-sm text-label-sm text-on-surface-variant/60">
+            © 2026 森息日常 · 手作於台灣
+        </div>
+</footer>
+<!-- FAB -->
+<button class="fixed bottom-lg right-lg bg-secondary text-on-secondary p-md rounded-full shadow-lg hover:scale-110 transition-transform z-40 flex items-center gap-sm">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+<span class="font-label-sm text-label-sm hidden md:inline">聊聊諮詢</span>
+</button>
+</body></html>

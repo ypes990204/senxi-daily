@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hant"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&amp;family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.organic-blob {
+    clip-path: circle(50% at 50% 50%);
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%
+    }
+.paper-texture {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBguWnFCvvYsNiGtMsei0J6TcFNYq8E1F4oYjA65s417Ei4ViUYA1qy7GWQRzp2xsBeTRYm9YZZQrUj73xNd68rMEj3HBBZXLXXAd1Osii5DNcy0CP1oLnDolLZSNPLATEVNSflHleUvs2eFywtZU_ZeBRxvE_5k9-s0no2hJBWvUEWCuUWuk8LpZrN9N7ERfYW92WsW7gdqbFOAWUSpNJXVGHcupm1OzrEzDlQs6Eg6SOThcxCoJptO-zRrQpuKE4LS_JZPGPCcrrj)
+    }</style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "background": "#fbf9f4",
+                    "on-secondary-fixed": "#360f00",
+                    "primary": "#445331",
+                    "tertiary": "#584d34",
+                    "inverse-surface": "#30312d",
+                    "tertiary-fixed": "#f2e1c0",
+                    "tertiary-container": "#71654a",
+                    "on-primary-fixed-variant": "#3d4b2a",
+                    "outline": "#76786e",
+                    "on-surface-variant": "#45483f",
+                    "surface-variant": "#e4e2dd",
+                    "on-tertiary-fixed": "#231b06",
+                    "tertiary-fixed-dim": "#d5c5a5",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed": "#ffdbcd",
+                    "on-surface": "#1b1c19",
+                    "secondary": "#8e4d31",
+                    "surface-bright": "#fbf9f4",
+                    "secondary-container": "#feaa87",
+                    "on-primary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-background": "#1b1c19",
+                    "error": "#ba1a1a",
+                    "surface-container-high": "#eae8e3",
+                    "on-secondary-fixed-variant": "#71361c",
+                    "surface-tint": "#546340",
+                    "surface": "#fbf9f4",
+                    "on-secondary-container": "#793c21",
+                    "surface-dim": "#dcdad5",
+                    "surface-container-low": "#f5f3ee",
+                    "on-primary-container": "#daebbe",
+                    "on-tertiary-fixed-variant": "#50462d",
+                    "primary-fixed-dim": "#bccda1",
+                    "primary-fixed": "#d8e9bc",
+                    "primary-container": "#5c6b47",
+                    "surface-container": "#f0eee8",
+                    "on-tertiary-container": "#f4e3c2",
+                    "on-error": "#ffffff",
+                    "surface-container-highest": "#e4e2dd",
+                    "secondary-fixed-dim": "#ffb597",
+                    "inverse-primary": "#bccda1",
+                    "outline-variant": "#c6c8bb",
+                    "on-secondary": "#ffffff",
+                    "inverse-on-surface": "#f3f1eb",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed": "#131f04",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "4px",
+                    "md": "16px",
+                    "xxl": "64px",
+                    "xs": "4px",
+                    "lg": "24px",
+                    "xl": "40px",
+                    "container-max": "1280px",
+                    "sm": "8px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["outfit"],
+                    "display-md": ["outfit"],
+                    "body-md": ["dmSans"],
+                    "body-lg": ["dmSans"],
+                    "accent-note": ["cursive"],
+                    "headline-md": ["outfit"],
+                    "display-lg": ["outfit"],
+                    "label-sm": ["dmSans"]
+            },
+            "fontSize": {
+                    "headline-lg": ["28px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "display-md": ["36px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "accent-note": ["20px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "label-sm": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md paper-texture">
+<!-- 1. Announcement Bar -->
+<div class="bg-secondary text-on-secondary px-lg py-sm text-center font-label-sm tracking-widest">
+        🌿 首購會員 9 折 · 滿 NT$1,500 免運 · 加入 LINE@ 領能量測試優惠碼
+    </div>
+<!-- 2. Navbar -->
+<nav class="bg-surface sticky top-0 z-50 shadow-sm opacity-95 border-b border-secondary">
+<div class="flex justify-between items-center w-full px-lg max-w-container-max mx-auto py-sm">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary text-display-md">eco</span>
+<span class="font-display-md text-display-md text-primary">森息日常</span>
+</div>
+<div class="hidden md:flex gap-lg items-center">
+<a class="text-secondary font-bold border-b-2 border-secondary font-body-md" href="#">首頁</a>
+<div class="group relative py-md">
+<button class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1 font-body-md">
+                        全部商品 <span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<div class="absolute top-full left-0 hidden group-hover:block bg-surface-container-low shadow-xl rounded-xl p-md min-w-[160px]">
+<a class="block py-2 text-on-surface hover:text-primary" href="#">草本系列</a>
+<a class="block py-2 text-on-surface hover:text-primary" href="#">水晶套裝</a>
+<a class="block py-2 text-on-surface hover:text-primary" href="#">能量草杖</a>
+</div>
+</div>
+<a class="text-secondary font-bold hover:scale-95 transition-transform font-body-md" href="#">能量測試✨</a>
+<a class="text-on-surface-variant hover:text-primary font-body-md transition-colors" href="#">品牌故事</a>
+<a class="text-on-surface-variant hover:text-primary font-body-md transition-colors" href="#">日記專欄</a>
+</div>
+<div class="flex items-center gap-md text-primary">
+<button class="material-symbols-outlined hover:scale-110 transition-transform">search</button>
+<button class="material-symbols-outlined hover:scale-110 transition-transform">person</button>
+<button class="relative hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute -top-2 -right-2 bg-secondary text-on-secondary text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">3</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- 3. Hero Section -->
+<section class="relative overflow-hidden bg-surface-container-low px-lg py-xxl">
+<div class="max-w-container-max mx-auto grid md:grid-cols-2 gap-xl items-center">
+<div class="z-10">
+<h1 class="font-display-lg text-display-lg text-on-surface mb-md">親手栽培的能量・每日的森息</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-xl max-w-md">
+                    26 種精選草本與水晶，在幽靜的台灣山林裡，為您的日常空間注入最原始的療癒力量。
+                </p>
+<div class="flex flex-wrap gap-md">
+<button class="bg-primary text-on-primary px-xl py-md rounded-xl font-bold shadow-lg hover:bg-primary-container hover:text-on-primary-container transition-all scale-100 hover:scale-105">選購全系列</button>
+<button class="border-2 border-secondary text-secondary px-xl py-md rounded-xl font-bold hover:bg-secondary-fixed transition-all scale-100 hover:scale-105">✨ 先測你的能量狀態</button>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -top-10 -right-10 w-64 h-64 bg-secondary-fixed opacity-30 organic-blob -z-10"></div>
+<img class="rounded-xl shadow-xxl w-full object-cover aspect-square" data-alt="A meticulously arranged flat-lay of dried herbs, sage bundles, and various polished crystals including amethyst and clear quartz. The scene is illuminated by soft natural morning light filtering through a wooden window frame, casting gentle shadows on a textured cream linen cloth. The aesthetic is warm, artisan-centered, and deeply connected to nature, with a color palette of moss greens, earthy terracottas, and sand beiges." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgc6wzoJJk8VsF9--HcP5h3eD04tZhVUm0b6xpyIcmFAalSaeDizygAOy1C_iftHpNqJZP8UVJBxdhU9vRpoOKYlmSDLU-fWKTlPq3nYTTyhFV98Z6y17nU64G_0ODeqc7phF96fAYwxc-qujrD8hyl-pgCO8AtpfFGOIA1k0r5O5rAti-aweJ3riGsL9PTo4nvfKqLApg-5HIdIrLkr_BudlozzsWUUcOUNxX_5rS9lkG3Vr2eQLclKjuRXKc3SUh9P51Lalo7Dqb"/>
+</div>
+</div>
+</section>
+<!-- 4. Energy Quiz Card -->
+<section class="max-w-container-max mx-auto px-lg -mt-xxl mb-xxl relative z-20">
+<div class="bg-gradient-to-r from-secondary to-secondary-container p-xl rounded-xl shadow-xl flex flex-col md:flex-row items-center justify-between text-on-secondary">
+<div class="mb-md md:mb-0">
+<h2 class="font-headline-lg text-headline-lg mb-2">不知道從哪開始？讓能量為你選擇</h2>
+<div class="flex gap-md opacity-90">
+<span class="flex items-center gap-1 font-label-sm"><span class="material-symbols-outlined">psychology</span> 當下心境</span>
+<span class="flex items-center gap-1 font-label-sm"><span class="material-symbols-outlined">auto_awesome</span> 當週運勢</span>
+<span class="flex items-center gap-1 font-label-sm"><span class="material-symbols-outlined">bedtime</span> 星座對應</span>
+</div>
+</div>
+<button class="bg-on-secondary text-secondary px-xl py-md rounded-full font-bold hover:scale-105 transition-transform flex items-center gap-2">
+                開始能量測試 <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- 5. Three Series -->
+<section class="max-w-container-max mx-auto px-lg py-xxl">
+<div class="grid md:grid-cols-3 gap-lg">
+<!-- Series 1 -->
+<div class="bg-surface border border-surface-variant rounded-xl p-md shadow-sm hover:shadow-md transition-shadow">
+<img class="w-full aspect-[4/3] object-cover rounded-lg mb-md" data-alt="A collection of bundled dried sage and palo santo sticks tied with organic hemp string. The scene is set on a rustic wooden table with a soft focus background. The lighting is warm and golden, emphasizing the tactile textures of the herbs. The style is artisan and handcrafted, using tones of moss green and stone." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpZ4-r2jnf8dzEHABd_jcDQEOsaiL7-z3B_g-mtzCrQcjjUNHvUmpSWsGJ7g8u7oaRfTjE843AvOe5smHb1hf8s5KSd8N_voY8MZHQtFgG1RAuSuA7O-4BgxawEcm3Q4ZBp0TT9M0VMa2J0ry3mgziKHcmJIT1oBy23Qaa_93aYaHN6ujtqsPzgxVWa7TwwwVmHC3oQPZ8zmzRSBt5zh5T4Mt1N_6DcCThZaDR_m7mA4sVsAP11W3NE2T7fbDbVo5SENSerivQe77Y"/>
+<h3 class="font-headline-md text-headline-md text-on-surface">草本系列 (8款)</h3>
+<p class="text-on-surface-variant mb-md font-body-md">鼠尾草, 祕魯聖木, 薰衣草...</p>
+<a class="text-primary font-bold flex items-center gap-1 hover:underline" href="#">瀏覽系列 <span class="material-symbols-outlined">east</span></a>
+</div>
+<!-- Series 2 -->
+<div class="bg-surface border border-surface-variant rounded-xl p-md shadow-sm hover:shadow-md transition-shadow">
+<img class="w-full aspect-[4/3] object-cover rounded-lg mb-md" data-alt="A beautiful arrangement of raw and polished healing crystals including amethyst clusters, aventurine stones, and citrine towers. They are placed in a shallow sand beige ceramic bowl on a sunlit ledge. The atmosphere is serene and spiritual, capturing the clarity and natural beauty of the minerals." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBDFTHTbIaGtx3VuEx1S8Vgs24OjVObsyWMTAnJN3yyNSPa6ze22-KN_U1K4vgT_Ju0OSsf48WwrK9znEqk2nuOfZxhrWeVrdMmnEWy1tGjYkzcvlWWNeUl1DM5DSYW5oUguQ2_CZaTAPFB5oCLMuSczrmTxLQCZ-xRso-XjNTQLkbRhxkvNpLcXvx6TXGAgkksjqiFdhR4QjezKjkMDLRFIeClbzIlyNQ6JxPBcKuRxQFql9CfihDOneYd5_A_gM8jgMqFcVRSq50"/>
+<h3 class="font-headline-md text-headline-md text-on-surface">水晶套裝 (9款)</h3>
+<p class="text-on-surface-variant mb-md font-body-md">紫晶簇, 東陵玉, 黃水晶...</p>
+<a class="text-primary font-bold flex items-center gap-1 hover:underline" href="#">瀏覽系列 <span class="material-symbols-outlined">east</span></a>
+</div>
+<!-- Series 3 -->
+<div class="bg-surface border border-surface-variant rounded-xl p-md shadow-sm hover:shadow-md transition-shadow">
+<img class="w-full aspect-[4/3] object-cover rounded-lg mb-md" data-alt="Artisanal smudge wands made from dried lavender, rosemary, and sage, meticulously bound with colorful threads. Each wand features a small crystal tucked into the binding. The setting is a bright, organic-themed craft room with neutral earth tones and high-key soft lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfHlUlm4l1e8w1JFs14LHsdG7gSZAjxiTBTmKIIHOQtIqVkie5B803l3Dzhu2C65rOhtjxE7PSxGEiPehAzw8-5q6Mr1e4YN3pWiaqOut2kV0KCgn8Egigvy7qXhzWy_8JutHZcaewHqpBlYPXnj5GNSLD4JZS3n4bW7sI8ma1s5cnJSU-BgI2rOr6-0pffOpfWq-GXJ-Y0dYIsokxF_aeVJYFJSnzS_Y8iZtqcJ12vW2F_sQBTJWKK9xFbnaSODYAbS7HAWC7xbgQ"/>
+<h3 class="font-headline-md text-headline-md text-on-surface">能量草杖 (9款)</h3>
+<p class="text-on-surface-variant mb-md font-body-md">薰衣草複方, 森林秘境...</p>
+<a class="text-primary font-bold flex items-center gap-1 hover:underline" href="#">瀏覽系列 <span class="material-symbols-outlined">east</span></a>
+</div>
+</div>
+</section>
+<!-- 6. Featured Products -->
+<section class="bg-surface-container-low py-xxl">
+<div class="max-w-container-max mx-auto px-lg">
+<h2 class="font-display-md text-display-md text-center mb-xl">熱門推薦商品</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-lg">
+<!-- Product 1 -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all group">
+<div class="relative overflow-hidden">
+<img class="w-full aspect-square object-cover group-hover:scale-105 transition-transform" data-alt="A bundle of high-quality Californian White Sage smudge sticks on a white background. Soft shadows and clean composition. Light mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_65B1ykHOXyCy72UgjLRM0HwG2hOnAkdw00UrjfqypuZfgQCDhBkc1xzV-BlKuuOlo6axcYMX1jhhD0Tf96FmI1Y__WZrnvwp6q2J-Rxtij21oneCiMfc_N-Nn6rmtwU5J1yhHO05ipxFYV3HG39DLFfHLDOvR3zt2ILoKpfSmVn84CYidDD1ZcQq1MLcVaqfgPx0lDtMyDoJQuUDP6_IqKrWk6fc38NK7ARusZQozpqzJPXYo4iRzUoWyPGKZy3ABCNeEI5CFQjD"/>
+<span class="absolute top-2 left-2 bg-secondary text-on-secondary px-2 py-1 rounded text-xs">HOT</span>
+</div>
+<div class="p-md text-center">
+<h4 class="font-bold mb-1">加州白鼠尾草</h4>
+<p class="text-secondary font-bold mb-md">NT$280</p>
+<button class="w-full bg-secondary text-on-secondary py-2 rounded-lg font-bold hover:bg-on-secondary-fixed transition-colors">加入購物車</button>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all group">
+<div class="relative overflow-hidden">
+<img class="w-full aspect-square object-cover group-hover:scale-105 transition-transform" data-alt="A glowing Brazilian Amethyst cluster with deep purple crystal points. Resting on a warm wooden base. Elegant and luxurious feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiUoNwd8nn74wLQGKfjlF6wd7-NmER0Av_s2ZVONNZ0O2fYuZkb4VEJKSCRt0mKFW5TKI3Y9iAXcwFFicfyJZpo6FJAlnvmfZBOzRZDoIps0t5z9YrAdZ7ro7LqhzazcppaQVvZG3IwjEa5SeJrL54TycDhl_ueKLyQB0OjwewxjV4UDfzGFDKHAyeNXW94xF2p2bysTDHAA66ZZ28s9PKCUdhjQrY5KfFrPM013jPs4DrH5b4Whzxw_A9RvBHdDOLz5l7HWFHXt00"/>
+</div>
+<div class="p-md text-center">
+<h4 class="font-bold mb-1">紫水晶原石座</h4>
+<p class="text-secondary font-bold mb-md">NT$1,180</p>
+<button class="w-full bg-secondary text-on-secondary py-2 rounded-lg font-bold hover:bg-on-secondary-fixed transition-colors">加入購物車</button>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all group">
+<div class="relative overflow-hidden">
+<img class="w-full aspect-square object-cover group-hover:scale-105 transition-transform" data-alt="Premium Palo Santo wood sticks from Peru, tied with a natural cotton cord. A small sprig of dried rosemary is tucked in the bundle. Organic and earthy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-AFcPVfxfhMvO1wMQ6RLX5h0IjhLaA7FflANi0IZHZ39j7CIqOoX__yC_s7DatfOipr5725D_9KoQZeN92xH6l-ez1coexasuVhrIiqVdacKBdcR-yuRgTtnGIN0xa-bgsD9PUNR0_EVhuCOIJwiaIBq4XcSMht2S6hY8DpgXN72VTfbLgqirzKzG8asvm9f5J16Nrhg-XJoUCmVs_dcwusqHABU2-Xb5Uc3FEdt8RlCFPfHB6QAy7PgkVQmXNT_4Qrjs6Cav0Boe"/>
+</div>
+<div class="p-md text-center">
+<h4 class="font-bold mb-1">祕魯聖木條裝</h4>
+<p class="text-secondary font-bold mb-md">NT$450</p>
+<button class="w-full bg-secondary text-on-secondary py-2 rounded-lg font-bold hover:bg-on-secondary-fixed transition-colors">加入購物車</button>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all group">
+<div class="relative overflow-hidden">
+<img class="w-full aspect-square object-cover group-hover:scale-105 transition-transform" data-alt="A handmade lavender smudge wand, intricately bound with silver thread and topped with a tiny clear quartz shard. Delicate and artistic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBU9PckOdlzVIlDhC7Zz8DRMNjYHa8xOCONQYP9pBOEKv1hOAT8bejgup5EqedrxzFk-eQ4PTDscGmf_L_0aFhq0wkrnIi185dtdfCE7FdYQddQGs8TfBxfyRqS_CXa6iVcdm3NMofNJGL15xJuGoHKfUnPEmFpIIiH3fImxd1iEu5C0ebEI7A0SfojONbOTANWWd1ocHWa_diX4QNlKCwOrzWkAI4AWNqVyhBdim8VrCcKKRsPmyQh1bnbuky1bxnXFRUR_cI6PmZt"/>
+</div>
+<div class="p-md text-center">
+<h4 class="font-bold mb-1">薰衣草能量草杖</h4>
+<p class="text-secondary font-bold mb-md">NT$680</p>
+<button class="w-full bg-secondary text-on-secondary py-2 rounded-lg font-bold hover:bg-on-secondary-fixed transition-colors">加入購物車</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. Signature Wand Spotlight -->
+<section class="max-w-container-max mx-auto px-lg py-xxl">
+<div class="relative rounded-xxl overflow-hidden bg-surface-container-highest shadow-xl flex flex-col md:flex-row items-center">
+<div class="md:w-1/2 p-xl">
+<span class="inline-block bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full text-sm font-bold mb-md">本店招牌</span>
+<h2 class="font-display-md text-display-md mb-md text-on-surface">薰衣草複方手作能量草杖</h2>
+<p class="font-body-lg text-on-surface-variant mb-xl">
+                    結合高山薰衣草、雪松與尤加利，每一束都由職人親手編紮，專為壓力繁重的都市靈魂設計，帶來深度放鬆的靜謐氣息。
+                </p>
+<button class="bg-primary text-on-primary px-xl py-md rounded-xl font-bold shadow-lg hover:scale-105 transition-transform">看 9 款配方</button>
+</div>
+<div class="md:w-1/2 h-full min-h-[400px]">
+<img class="w-full h-full object-cover" data-alt="A close-up photograph of a skilled artisan's hands carefully binding a bundle of fresh lavender and cedar sprigs with natural twine. The hands are slightly weathered, suggesting expertise. The background is a soft-focus workshop filled with bunches of drying herbs. The lighting is warm and cinematic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCepVF8eL7iZcY1xoELRS4_UlKksCsjHUHgZdvzKYFwRh22iITDZUuunzBXgFRT6EleQE960AIwpim0rMCUonYXlTSBE1-iDh1kRUb6__KEFGOLf4oQOlYIpG4LzqWHHLELkeaIaHUj7krwEIPL72ij0T6ru_2Y9a7jpA90Ga6RnUg9O9TbC2euczSPCoqcv97wv55vR87gjVH4jskti2F0aOsHcrU7nL65DE0lFeDBJ9gDcXJXtpaMFuiYntHKaS-tL--96Sl6RvwF"/>
+</div>
+</div>
+</section>
+<!-- 8. Crafting Story -->
+<section class="max-w-container-max mx-auto px-lg py-xxl">
+<h2 class="font-display-md text-display-md text-center mb-xl">來自土地的編織過程</h2>
+<div class="grid md:grid-cols-3 gap-xl">
+<div class="text-center">
+<div class="mb-md inline-block organic-blob overflow-hidden w-48 h-48 border-4 border-tertiary-fixed shadow-lg">
+<img class="w-full h-full object-cover" data-alt="A wide shot of a wild herb garden during the golden hour. Sun rays pierce through the greenery. Tones of moss green and gold." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2kVGD3P8F3yR8pREmsj4Ckj-cDmFllkBwM7O4ZHSqgEvkV_Mn3p96TtVX7STIZy4uqrQQLxD_8f-zMdfKt6uQM3qv5vW7hVoeA47dTKQV2X9kKyEQ35ij6hKiS5SkHsPMgqtmjqkF4WpEkOFRAsXozIr8EL73CpFLJKCzVHoQlkQpiDvR4Uz6Dt4RUWnzU4o3nAv8lH7hFi5iFnhUhNecUPg_0Lj4fvRbR0uUeuIGWK1uvfVU3DVfwAQVXYiGiTCPAuVpDAIAph7z"/>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-2">① 採集</h4>
+<p class="text-on-surface-variant">遵循節氣，在清晨露水未乾時，親手採摘最具生命力的植萃。</p>
+</div>
+<div class="text-center">
+<div class="mb-md inline-block organic-blob overflow-hidden w-48 h-48 border-4 border-tertiary-fixed shadow-lg">
+<img class="w-full h-full object-cover" data-alt="Bunches of diverse herbs hanging upside down from a wooden beam in a dry, ventilated shed. Soft shadows and a sense of slow time." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAphY8P4R2ldKkRmFj4Q_wcR-ZzdbfW240ABQ4S-MsrAtRmqXj-OXyJ41XZTcIsTxbQoTzBodIB_h89cvXGsoPd0rkMUPMBpixTJX5K2CU2Bh6DQWHCw9YLM4aUlwn-e3LWsK3yrDLtX5TXaDZLltUwwMmZmv6IRhansrugY0HS6WxcMSDPFImX8tIR7F2F7-vYlxfOelokpQ9-OEat1OnGej-tBljBw0Wlt5gaoe3i98Jsa5VvBya8hgwyTpcCKsxjkTtzbMOTzgYF"/>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-2">② 風乾</h4>
+<p class="text-on-surface-variant">在恆溫的自然環境中慢速陰乾，保留植物最純粹的精油精華。</p>
+</div>
+<div class="text-center">
+<div class="mb-md inline-block organic-blob overflow-hidden w-48 h-48 border-4 border-tertiary-fixed shadow-lg">
+<img class="w-full h-full object-cover" data-alt="A detailed shot of colorful threads criss-crossing over a sage bundle. The texture of the twine and the leaves is palpable." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGaRcxpMlnn5K7b1zFZQAm8oSyHn0JZnmn-ohGIlbo0g43VQP4KV6F2yWlVQr-jHiTmdXwN24abDfvdMhmZqTRa425KH228SeOptsOGRrtAvlDx93j4QRR25X4qSgV5-F6hIUy17a6u4VpR-WYSWBVCkL4iLDok20XfyABpLu5RmDtuWzOxzYJXAvWgiFrHYQK64qHuO_x5ToIDHIkiuhrvCvUvC9kyL-OWYdH0rAl90YVD6wT5RY1uxnpACoeUuqAb858Fys3zxd8"/>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-2">③ 編紮</h4>
+<p class="text-on-surface-variant">伴隨冥想與祝福，一繞一繫，將大地的能量封存於草杖之中。</p>
+</div>
+</div>
+<div class="mt-xl p-lg bg-surface-container rounded-xl border-l-4 border-primary italic text-on-surface-variant">
+            「每一束草杖都有它要去的家，我只是負責將這份自然的絮語轉化成觸手可及的陪伴。」— 創辦人 森林
+        </div>
+</section>
+<!-- 9. Use Cases -->
+<section class="bg-tertiary-fixed py-xxl">
+<div class="max-w-container-max mx-auto px-lg">
+<h2 class="font-display-md text-display-md text-center mb-xl">當你需要森息日常...</h2>
+<div class="grid md:grid-cols-3 gap-lg">
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl h-64 mb-md">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="A minimalist living room with white walls and a large plant. A small wisp of smoke rises from a smudge stick on a tray. Calm and clean atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDX5FS_XTMC164BntnDq9DTilAJfHUhGhUr22YwT7IBabY_owOwlW2PkiYTLiWBddB1FB9ND5E3uJOBnYJZzREoQp2pzvQjHoz_p-DbpYsMxJ2k3hByvpirp7VB7yE4H6mzfh3cY2Xsa6ngKiZG3p-YaQyGEjXY4hMl62QW7ZtE5vANb1XYBRVQ31tfdwlQ3lWKNw5hyZoXawAbn8QutrlEoiKmLdKib_ShK0PbOmmg-jgTKhW2PttQXtjK_HxjhREL6b_EAWEg0eoE"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+<h4 class="text-white font-headline-md text-headline-md">居家淨化</h4>
+</div>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl h-64 mb-md">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="A person sitting in a meditation pose in a sun-drenched room. Several crystals are placed in front of them on a rug. Serene and centered." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSmYvduUrhohLR55OuqvkxCVO8qVNete7XDEZw22tDZi-BESWqv5AL87oW5-lZGRlK9N8f-yUarrdi5dQMR_aynbxfLb4XACFb44IrWO9GLvRYRGxGxvBE8m0bohNB61SP60maNcb3xmXX0dhdNp1R90Sv-4mXsSuz1rRGDhJFXgUkcLDxaoTX92_aQavgkJhaz3juSSxbEW2ooyL_morRUd0F3ROOmtBMNvTv8HKW2do0m17BbTCI9szzIpDdOiejMPKQTKBh8Jj-"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+<h4 class="text-white font-headline-md text-headline-md">冥想練習</h4>
+</div>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl h-64 mb-md">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="Cardboard boxes and a few house plants in a bright, empty apartment. Sunlight hitting the hardwood floors. New beginnings." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKXV_pV_YeFQx3yLh0nr7ZchvGcyZBIb3-V6Y3Puqvyrva9tspOhilb1JlqAKMh7x4rntn0mXhI-OhyW6_Ws514VTpmXjCB4zLWDwZey6lW5hKehVYlCS1C8XiOB3y9iUxYwzqZ_z4edwvIefPa96WOvU6KZolq8iwg687xHbRmvdo3FhyXBifNMpU5vgRBYdYNj80Q2CNl-vlwl5jDbhLlgn1WapDtl_yaGb3AyU6HcauPhaLaNJ3Ciwm6z6gybdW66Z0uWu0ypKE"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+<h4 class="text-white font-headline-md text-headline-md">新空間入住</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 10. Reviews -->
+<section class="max-w-container-max mx-auto px-lg py-xxl">
+<h2 class="font-display-md text-display-md text-center mb-xl">旅人的森息體驗</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+<!-- Review 1 -->
+<div class="bg-surface p-lg rounded-xl shadow-sm border border-surface-variant">
+<div class="flex text-secondary mb-2">
+<span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span>
+</div>
+<p class="text-on-surface mb-md font-body-md">「收到的那一刻就能感受到包裝的用心，鼠尾草的味道非常純粹，真的讓我有被洗滌的感覺。」</p>
+<span class="text-on-surface-variant font-label-sm">— 李小姐，台中</span>
+</div>
+<!-- Review 2 -->
+<div class="bg-surface p-lg rounded-xl shadow-sm border border-surface-variant">
+<div class="flex text-secondary mb-2">
+<span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span>
+</div>
+<p class="text-on-surface mb-md font-body-md">「能量草杖真的很美，捨不得燒掉。放在床頭睡覺變得很安穩，這是我買過最有能量的手作品。」</p>
+<span class="text-on-surface-variant font-label-sm">— 王先生，台北</span>
+</div>
+<!-- Review 3 -->
+<div class="bg-surface p-lg rounded-xl shadow-sm border border-surface-variant">
+<div class="flex text-secondary mb-2">
+<span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span>
+</div>
+<p class="text-on-surface mb-md font-body-md">「水晶的淨化套裝非常完整，說明書寫得很清楚，讓剛接觸水晶的我感到很安心。」</p>
+<span class="text-on-surface-variant font-label-sm">— 陳小姐，高雄</span>
+</div>
+</div>
+</section>
+<!-- 11. Newsletter -->
+<section class="max-w-container-max mx-auto px-lg mb-xxl">
+<div class="bg-tertiary-fixed-dim rounded-xxl p-xl md:p-xxl flex flex-col md:flex-row items-center gap-xl">
+<div class="md:w-1/2">
+<h2 class="font-display-md text-display-md text-primary mb-md">加入森息日記</h2>
+<p class="text-on-tertiary-fixed-variant font-body-lg mb-xl">每月兩封，分享植物節氣知識、空間淨化小語與專屬會員折扣。</p>
+<div class="flex flex-col sm:flex-row gap-sm">
+<input class="flex-1 bg-surface-container-lowest border-none rounded-xl px-lg py-md focus:ring-2 focus:ring-primary" placeholder="輸入您的電子郵件" type="email"/>
+<button class="bg-primary text-on-primary px-xl py-md rounded-xl font-bold hover:bg-primary-container transition-colors">立即訂閱</button>
+</div>
+</div>
+<div class="md:w-1/2 flex justify-center">
+<span class="material-symbols-outlined text-[160px] text-primary/20 select-none">eco</span>
+</div>
+</div>
+</section>
+<!-- 12. Footer -->
+<footer class="bg-surface-container-low rounded-t-xl py-xxl border-t border-surface-variant">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-lg px-lg max-w-container-max mx-auto mb-xl">
+<div>
+<h3 class="font-display-md text-display-md text-primary mb-lg">森息日常</h3>
+<p class="text-on-surface-variant mb-md font-body-md">手作於台灣山林<br/>傳遞土地最溫暖的呼吸</p>
+<div class="flex gap-md">
+<a class="text-primary hover:text-secondary" href="#"><span class="material-symbols-outlined">social_leaderboard</span></a>
+<a class="text-primary hover:text-secondary" href="#"><span class="material-symbols-outlined">photo_camera</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-primary mb-md">探索森息</h4>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">全部商品</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">能量測試</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">能量草杖</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">品牌故事</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-primary mb-md">客戶服務</h4>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">客服支援</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">退換貨政策</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">聯絡我們</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">常見問題</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-primary mb-md">門市資訊</h4>
+<ul class="space-y-2">
+<li class="text-on-surface-variant font-body-md">台北工作室 (預約制)</li>
+<li class="text-on-surface-variant font-body-md">週一至週五 10:00 - 18:00</li>
+<li class="flex items-center gap-md mt-md">
+<span class="material-symbols-outlined text-sm">payments</span>
+<span class="material-symbols-outlined text-sm">credit_card</span>
+<span class="material-symbols-outlined text-sm">local_shipping</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-lg pt-xl border-t border-surface-variant text-center text-on-surface-variant font-label-sm">
+            © 2026 森息日常 · 手作於台灣 · All Rights Reserved.
+        </div>
+</footer>
+</body></html>

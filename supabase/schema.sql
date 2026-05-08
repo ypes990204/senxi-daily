@@ -78,6 +78,18 @@ create table if not exists quiz_results (
 );
 
 -- ============================================================
+-- ALTER: 確保既有 table 也有新欄位（昨天建的舊 schema 缺這些）
+-- ============================================================
+alter table products add column if not exists subtitle text;
+alter table products add column if not exists ingredients text[] default '{}';
+alter table products add column if not exists mood_tags text[] default '{}';
+alter table products add column if not exists luck_tags text[] default '{}';
+alter table products add column if not exists elements text[] default '{}';
+
+alter table profiles add column if not exists birthday date;
+alter table profiles add column if not exists zodiac text;
+
+-- ============================================================
 -- RLS POLICIES
 -- ============================================================
 alter table products enable row level security;

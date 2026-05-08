@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#785e33",
+                        "surface-variant": "#e3e2e0",
+                        "on-tertiary-fixed-variant": "#4a473c",
+                        "primary-fixed": "#c9ead9",
+                        "error": "#ba1a1a",
+                        "surface": "#faf9f7",
+                        "secondary-fixed": "#ffdeac",
+                        "tertiary-fixed": "#e9e2d4",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#1a1c1b",
+                        "primary": "#163328",
+                        "on-surface-variant": "#424844",
+                        "inverse-surface": "#2f312f",
+                        "secondary-fixed-dim": "#e3c18d",
+                        "secondary": "#745a2f",
+                        "surface-dim": "#dadad8",
+                        "background": "#faf9f7",
+                        "tertiary-container": "#48443a",
+                        "on-tertiary-container": "#b7b1a4",
+                        "on-primary-container": "#99b9a9",
+                        "primary-container": "#2d4a3e",
+                        "on-background": "#1a1c1b",
+                        "surface-bright": "#faf9f7",
+                        "surface-container-highest": "#e3e2e0",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#c1c8c3",
+                        "surface-tint": "#476558",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#adcebe",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed-dim": "#ccc6b8",
+                        "tertiary": "#312e25",
+                        "on-primary-fixed": "#022016",
+                        "inverse-on-surface": "#f1f1ee",
+                        "surface-container-low": "#f4f3f1",
+                        "on-secondary-fixed-variant": "#5a431a",
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#eeeeeb",
+                        "secondary-container": "#fedaa4",
+                        "on-primary-fixed-variant": "#304d40",
+                        "outline": "#727974",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#1e1b13",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed": "#281900",
+                        "primary-fixed-dim": "#adcebe",
+                        "surface-container-high": "#e9e8e6",
+                        "terracotta": "#B35A44",
+                        "moss": "#476558"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "element-gap": "24px",
+                        "gutter": "32px",
+                        "section-padding": "120px",
+                        "container-max": "1200px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "display-xl": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["1.125rem", {"lineHeight": "1.8", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                        "label-sm": ["0.75rem", {"lineHeight": "1.4", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                        "display-xl": ["4.5rem", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "headline-md": ["2rem", {"lineHeight": "1.3", "fontWeight": "400"}],
+                        "headline-lg": ["3rem", {"lineHeight": "1.2", "fontWeight": "400"}],
+                        "body-md": ["1rem", {"lineHeight": "1.7", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
+    vertical-align: middle
+    }
+.grain-overlay {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDHJvQPOihowjJDP1Y3ohiku4UfZCr-Qjnuk3V2fq3_HZMuqIlRnjwc2QWBrP6RmEIeIhP2xHGENmwwsHPMdkmmejEEYdYNtLOXXuBs9IFezVPlUkMnAOjxk5whGcsdQzXV0tLxuQ_prA_ZTUOXlsZs-Yqkk6A5uONr4SDgDdOrPT9ALkjzDiZATdRd7hibbLdAmriHvgxQwJ25N8ceq9M41m-Jsy-Ak-023gcyX-xLowmzKozMiGTbkjuSm5YiXMF4ZdzXKScki0Ie);
+    opacity: 0.03;
+    pointer-events: none
+    }
+.hairline-gold {
+    border-bottom: 0.5px solid #B89968
+    }</style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary-container">
+<div class="fixed inset-0 grain-overlay z-50"></div>
+<!-- Simplified Nav -->
+<nav class="bg-surface sticky top-0 z-40 border-b border-secondary/20">
+<div class="flex justify-between items-center w-full px-gutter py-6 max-w-container-max mx-auto">
+<h1 class="font-headline-md text-headline-md text-primary tracking-wide">森息日常</h1>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-terracotta hover:text-secondary transition-colors duration-500 flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+                Return to shopping
+            </a>
+</div>
+</nav>
+<!-- Checkout Progress Bar -->
+<div class="bg-surface-container-low py-8">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex items-center justify-center gap-4 text-label-sm font-label-sm uppercase tracking-widest">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="w-6 h-6 rounded-full border border-on-surface-variant flex items-center justify-center text-[10px]">1</span>
+                    確認商品 <span class="material-symbols-outlined text-[16px] text-moss">check</span>
+</div>
+<div class="w-12 h-[1px] bg-secondary/30"></div>
+<div class="flex items-center gap-2 text-terracotta font-medium">
+<span class="w-6 h-6 rounded-full bg-terracotta text-white flex items-center justify-center text-[10px]">2</span>
+                    配送與付款
+                </div>
+<div class="w-12 h-[1px] bg-secondary/30"></div>
+<div class="flex items-center gap-2 text-on-surface-variant/50">
+<span class="w-6 h-6 rounded-full border border-on-surface-variant/30 flex items-center justify-center text-[10px]">3</span>
+                    完成訂購
+                </div>
+</div>
+</div>
+</div>
+<main class="max-w-container-max mx-auto px-gutter py-12 lg:py-20">
+<div class="flex flex-col lg:flex-row gap-12 lg:gap-16">
+<!-- LEFT MAIN COLUMN -->
+<div class="flex-grow lg:w-3/5 space-y-16">
+<!-- Section A: Cart Items -->
+<section>
+<div class="flex items-center gap-4 mb-8">
+<h2 class="font-headline-md text-headline-md text-primary">訂購商品確認</h2>
+<div class="h-[1px] flex-grow bg-secondary/20"></div>
+</div>
+<div class="space-y-8">
+<!-- Item 1 -->
+<div class="flex gap-6 pb-8 border-b border-secondary/10">
+<img class="w-24 h-24 object-cover rounded-xl shadow-sm" data-alt="A bundle of dried lavender, cedar, white sage, and palo santo tied together with natural twine. The setting is a minimalist wooden table with soft morning sunlight creating long shadows. The style is botanical and earthy with muted greens and browns." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgHoZDMZ7zL-a3bwY37Il2YOnNd6w-B7Mrs4SHgzynwo6bvi5-bWYQe7aRZU8AM3lRsqfMBoON2CW0Q8Mu62TpZt617rWZc4LM8fNZTD7PzXIlgo2LtPHygIOxGTBvqLGFmBD_X8W8qr0eIba3lQ0k5jFVkE7QPm5apzeiI6Hst5Q_sgrEpUMCT09i7n2BFyUakz4aMEOXA7Bt5GjAgFF-hwLm21vfs7Bl856aXiBhTZBGvAUG1bpLipH0I1FZfe2O2tt3nB3TVVEI"/>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h3 class="font-body-lg text-primary">薰衣草+雪松+白鼠尾草+祕魯聖木 草杖</h3>
+<p class="text-label-sm text-on-surface-variant uppercase tracking-tight">Powerful Purification Set</p>
+</div>
+<p class="font-body-lg text-primary">NT$880</p>
+</div>
+<div class="flex items-center justify-between mt-4">
+<div class="flex items-center border border-secondary/20 rounded-lg overflow-hidden">
+<button class="px-3 py-1 hover:bg-surface-container transition-colors">-</button>
+<span class="px-4 py-1 text-label-sm">1</span>
+<button class="px-3 py-1 hover:bg-surface-container transition-colors">+</button>
+</div>
+<div class="flex gap-4 text-label-sm text-on-surface-variant">
+<button class="hover:text-terracotta flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">favorite</span> 移至願望清單</button>
+<button class="hover:text-error flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">delete</span> 移除</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex gap-6 pb-8 border-b border-secondary/10">
+<img class="w-24 h-24 object-cover rounded-xl shadow-sm" data-alt="A collection of raw, translucent purple amethyst crystals clustered together on a dark slate surface. The lighting is moody and focused, highlighting the natural facets and deep violet hues of the stones. Aesthetic is mystical and high-end editorial." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuQ-NT-iw8h3_3bd6yIMoHCb0_JvZeHvajcuRJ-TS15oDw-DrKeF4tdOrUnkzqfs4Wo_TbMK65r5Y73CwcGlr6PURVsBXm0F6C8PFpLC8wjLqhEiZLcmAtxUJWf3zbORpLbzdFrKydq-ZLfR2pAu5jNoNTk51hOrpYsW0wSQMFwLxriRm9G8-hVA9bWu3KWkwd8-KZlBDzpeHzFwp9RZcStxLe4g2w3PEgIH8ZpW8xDm6vEraiYjY_QR4a682TW8aFxA7HTwrkfFJ7"/>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h3 class="font-body-lg text-primary">紫水晶原石套裝</h3>
+<p class="text-label-sm text-on-surface-variant uppercase tracking-tight">Inner Peace &amp; Wisdom</p>
+</div>
+<p class="font-body-lg text-primary">NT$1,280</p>
+</div>
+<div class="flex items-center justify-between mt-4">
+<div class="flex items-center border border-secondary/20 rounded-lg overflow-hidden">
+<button class="px-3 py-1 hover:bg-surface-container transition-colors">-</button>
+<span class="px-4 py-1 text-label-sm">1</span>
+<button class="px-3 py-1 hover:bg-surface-container transition-colors">+</button>
+</div>
+<div class="flex gap-4 text-label-sm text-on-surface-variant">
+<button class="hover:text-terracotta flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">favorite</span> 移至願望清單</button>
+<button class="hover:text-error flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">delete</span> 移除</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex gap-6 pb-8">
+<img class="w-24 h-24 object-cover rounded-xl shadow-sm" data-alt="Close up of dried lavender buds in a simple ceramic vessel. Soft, ethereal lighting creates a hazy, mist-like atmosphere. The color palette is composed of muted lilac and warm cream tones, reflecting a serene and contemplative ritualistic vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1X9mV95CM3ewi-GCgIde3G3xhtwmb7nFpE91hthXvxrrus807mpY9k2qNIqhmKKpkhf5oLdxkwMqSZz2wuybTrWkXdSn6upXf9L1G1AU6hFkb5ht4c9GNqUPXjFJHNQL5KKtlA2ybVu1lfNcUcEy_-6Riy_HU8ZL3MH3k4j3YISI1e3npfMsXt91IDssIxrlW7zRADIjhKDvNbb8stfZND-i44-wSHn9ArSxWVZ3OGBOV8IWKU2UY6UQyC4b70W5nJyR5u5ACJgvO"/>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h3 class="font-body-lg text-primary">薰衣草 (單方草本)</h3>
+<p class="text-label-sm text-on-surface-variant uppercase tracking-tight">Soothing Sleep Ritual</p>
+</div>
+<p class="font-body-lg text-primary">NT$640</p>
+</div>
+<div class="flex items-center justify-between mt-4">
+<div class="flex items-center border border-secondary/20 rounded-lg overflow-hidden">
+<button class="px-3 py-1 hover:bg-surface-container transition-colors">-</button>
+<span class="px-4 py-1 text-label-sm">2</span>
+<button class="px-3 py-1 hover:bg-surface-container transition-colors">+</button>
+</div>
+<div class="flex gap-4 text-label-sm text-on-surface-variant">
+<button class="hover:text-terracotta flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">favorite</span> 移至願望清單</button>
+<button class="hover:text-error flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">delete</span> 移除</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-10 p-6 bg-surface-container-low rounded-xl space-y-6">
+<div class="flex items-center justify-between">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 rounded border-secondary/30 text-moss focus:ring-moss" type="checkbox"/>
+<span class="text-body-md text-primary">禮品包裝服務 (+NT$80)</span>
+</label>
+<span class="material-symbols-outlined text-secondary/40">featured_seasonal_and_gifts</span>
+</div>
+<div class="flex gap-4">
+<div class="relative flex-grow">
+<input class="w-full bg-transparent border-b border-secondary/30 focus:border-moss focus:ring-0 px-0 py-2 text-body-md" placeholder="輸入優惠代碼" type="text" value="NEWMOON95"/>
+<span class="absolute right-0 top-2 text-moss text-label-sm font-medium">NEWMOON95 (新會員 95 折) 已套用 ✓</span>
+</div>
+<button class="px-6 py-2 border border-secondary/30 rounded-lg text-label-sm uppercase tracking-widest hover:bg-surface transition-colors">套用</button>
+</div>
+</div>
+</section>
+<!-- Section B: Shipping Info -->
+<section class="space-y-8">
+<div class="flex items-center gap-4">
+<h2 class="font-headline-md text-headline-md text-primary">收件資訊</h2>
+<div class="h-[1px] flex-grow bg-secondary/20"></div>
+<a class="text-label-sm text-terracotta hover:underline" href="#">為您自動帶入</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+<div class="space-y-1">
+<label class="text-label-sm text-on-surface-variant uppercase tracking-widest">收件人姓名</label>
+<input class="w-full bg-transparent border-b border-secondary/30 focus:border-moss focus:ring-0 px-0 py-2" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="text-label-sm text-on-surface-variant uppercase tracking-widest">聯絡電話</label>
+<input class="w-full bg-transparent border-b border-secondary/30 focus:border-moss focus:ring-0 px-0 py-2" type="tel"/>
+</div>
+</div>
+<div class="space-y-4">
+<label class="text-label-sm text-on-surface-variant uppercase tracking-widest block">配送方式</label>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<label class="flex items-center justify-between p-4 border border-secondary/20 rounded-xl cursor-pointer hover:bg-surface group transition-all">
+<div class="flex items-center gap-3">
+<input class="w-4 h-4 text-moss focus:ring-moss border-secondary/30" name="shipping" type="radio"/>
+<span class="text-body-md">宅配</span>
+</div>
+<span class="text-label-sm text-on-surface-variant line-through">NT$120</span>
+</label>
+<label class="flex items-center justify-between p-4 border-2 border-moss bg-primary-fixed/20 rounded-xl cursor-pointer shadow-sm">
+<div class="flex items-center gap-3">
+<input checked="" class="w-4 h-4 text-moss focus:ring-moss border-secondary/30" name="shipping" type="radio"/>
+<span class="text-body-md font-medium">7-11 取貨</span>
+</div>
+<span class="text-label-sm text-moss font-bold">滿 NT$1,500 免運 ✓</span>
+</label>
+<label class="flex items-center justify-between p-4 border border-secondary/20 rounded-xl cursor-pointer hover:bg-surface group transition-all">
+<div class="flex items-center gap-3">
+<input class="w-4 h-4 text-moss focus:ring-moss border-secondary/30" name="shipping" type="radio"/>
+<span class="text-body-md">全家取貨</span>
+</div>
+<span class="text-label-sm text-moss font-medium">NT$0</span>
+</label>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+<div class="space-y-1">
+<label class="text-label-sm text-on-surface-variant uppercase tracking-widest">城市</label>
+<select class="w-full bg-transparent border-b border-secondary/30 focus:border-moss focus:ring-0 px-0 py-2 appearance-none">
+<option>台北市</option>
+</select>
+</div>
+<div class="space-y-1">
+<label class="text-label-sm text-on-surface-variant uppercase tracking-widest">區域</label>
+<select class="w-full bg-transparent border-b border-secondary/30 focus:border-moss focus:ring-0 px-0 py-2 appearance-none">
+<option>信義區</option>
+</select>
+</div>
+<div class="col-span-2 md:col-span-1 space-y-1">
+<label class="text-label-sm text-on-surface-variant uppercase tracking-widest">門市 / 地址</label>
+<input class="w-full bg-transparent border-b border-secondary/30 focus:border-moss focus:ring-0 px-0 py-2" placeholder="請輸入店號或地址" type="text"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="text-label-sm text-on-surface-variant uppercase tracking-widest">訂單備註 (選填)</label>
+<textarea class="w-full bg-transparent border-b border-secondary/30 focus:border-moss focus:ring-0 px-0 py-2 resize-none" placeholder="有什麼想告訴我們的？" rows="2"></textarea>
+</div>
+</section>
+<!-- Section C: Payment Method -->
+<section class="space-y-8">
+<div class="flex items-center gap-4">
+<h2 class="font-headline-md text-headline-md text-primary">付款方式</h2>
+<div class="h-[1px] flex-grow bg-secondary/20"></div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<label class="flex flex-col items-center gap-3 p-4 border-2 border-moss bg-primary-fixed/10 rounded-xl cursor-pointer">
+<input checked="" class="hidden" name="payment" type="radio"/>
+<span class="material-symbols-outlined text-primary text-[32px]">credit_card</span>
+<span class="text-label-sm">信用卡</span>
+</label>
+<label class="flex flex-col items-center gap-3 p-4 border border-secondary/20 rounded-xl cursor-pointer hover:bg-surface transition-colors">
+<input class="hidden" name="payment" type="radio"/>
+<span class="material-symbols-outlined text-on-surface-variant text-[32px]">account_balance_wallet</span>
+<span class="text-label-sm">LINE Pay</span>
+</label>
+<label class="flex flex-col items-center gap-3 p-4 border border-secondary/20 rounded-xl cursor-pointer hover:bg-surface transition-colors">
+<input class="hidden" name="payment" type="radio"/>
+<span class="material-symbols-outlined text-on-surface-variant text-[32px]">universal_currency_alt</span>
+<span class="text-label-sm">街口支付</span>
+</label>
+<label class="flex flex-col items-center gap-3 p-4 border border-secondary/20 rounded-xl cursor-pointer hover:bg-surface transition-colors">
+<input class="hidden" name="payment" type="radio"/>
+<span class="material-symbols-outlined text-on-surface-variant text-[32px]">payments</span>
+<span class="text-label-sm">ATM 轉帳</span>
+</label>
+</div>
+<div class="p-8 bg-surface-container rounded-xl space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-1">
+<label class="text-label-sm text-on-surface-variant uppercase tracking-widest">卡號</label>
+<input class="w-full bg-transparent border-b border-secondary/30 focus:border-moss focus:ring-0 px-0 py-2" placeholder="**** **** **** ****" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-1">
+<label class="text-label-sm text-on-surface-variant uppercase tracking-widest">有效日期</label>
+<input class="w-full bg-transparent border-b border-secondary/30 focus:border-moss focus:ring-0 px-0 py-2 text-center" placeholder="MM / YY" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="text-label-sm text-on-surface-variant uppercase tracking-widest">CVC</label>
+<input class="w-full bg-transparent border-b border-secondary/30 focus:border-moss focus:ring-0 px-0 py-2 text-center" placeholder="***" type="text"/>
+</div>
+</div>
+</div>
+<p class="flex items-center gap-2 text-label-sm text-moss/70">
+<span class="material-symbols-outlined text-[18px]">lock</span> 
+                            您的支付資訊已受 SSL 256-bit 加密保護，請安心付款。
+                        </p>
+</div>
+</section>
+</div>
+<!-- RIGHT STICKY SIDEBAR -->
+<aside class="lg:w-2/5 space-y-8">
+<div class="sticky top-32 space-y-8">
+<div class="bg-surface p-8 rounded-xl shadow-[0_30px_60px_-15px_rgba(22,51,40,0.08)] border border-secondary/5">
+<h2 class="font-headline-md text-headline-md text-primary mb-8">訂單摘要</h2>
+<div class="space-y-4 text-body-md text-on-surface-variant mb-8">
+<div class="flex justify-between">
+<span>商品小計</span>
+<span class="text-on-surface">NT$2,800</span>
+</div>
+<div class="flex justify-between">
+<span>優惠折扣</span>
+<span class="text-terracotta">-NT$140</span>
+</div>
+<div class="flex justify-between">
+<span>運費</span>
+<span class="text-moss">NT$0</span>
+</div>
+<div class="flex justify-between">
+<span>包裝費用</span>
+<span>NT$0</span>
+</div>
+<div class="pt-4 border-t border-secondary/10 flex justify-between items-end">
+<span class="font-medium text-primary">總金額</span>
+<span class="text-headline-lg font-headline-lg text-terracotta">NT$2,660</span>
+</div>
+</div>
+<button class="w-full py-5 bg-moss text-white rounded-xl font-label-sm uppercase tracking-widest hover:opacity-90 transition-opacity shadow-lg shadow-moss/20">
+                            確認訂單並付款
+                        </button>
+<div class="mt-8 grid grid-cols-3 gap-4 border-t border-secondary/10 pt-8">
+<div class="flex flex-col items-center text-center gap-2">
+<span class="material-symbols-outlined text-secondary/60 text-[20px]">verified_user</span>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-tighter">SSL Secure</span>
+</div>
+<div class="flex flex-col items-center text-center gap-2">
+<span class="material-symbols-outlined text-secondary/60 text-[20px]">assignment_return</span>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-tighter">7-Day Return</span>
+</div>
+<div class="flex flex-col items-center text-center gap-2">
+<span class="material-symbols-outlined text-secondary/60 text-[20px]">notifications_active</span>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-tighter">Order Alerts</span>
+</div>
+</div>
+</div>
+<div class="p-6 bg-primary-container text-on-primary-container rounded-xl border border-primary/20 relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 opacity-10 transform group-hover:scale-110 transition-transform duration-1000">
+<span class="material-symbols-outlined text-[100px]" style="font-variation-settings: 'FILL' 1;">spa</span>
+</div>
+<h4 class="font-label-sm text-label-sm uppercase tracking-widest mb-2 opacity-80">本次儀式組合</h4>
+<p class="text-body-md font-medium leading-relaxed">
+                            強力淨化 × 安神助眠 × 全方位淨化
+                        </p>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Cross-sell strip -->
+<section class="bg-surface-container-lowest py-20 border-y border-secondary/10 overflow-hidden">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-col md:flex-row justify-between items-center mb-12 gap-6 text-center md:text-left">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary">最後的加購驚喜</h2>
+<p class="text-body-md text-on-surface-variant mt-2">差 <span class="text-terracotta font-bold">NT$340</span> 即可獲得免費能量草杖體驗包</p>
+</div>
+<div class="h-1 w-32 bg-secondary-fixed rounded-full">
+<div class="h-1 w-[80%] bg-moss rounded-full"></div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Mini Product 1 -->
+<div class="flex items-center gap-4 group cursor-pointer">
+<img class="w-20 h-20 object-cover rounded-xl grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="A single, elegant bundle of dried white sage tied with a cream thread. Soft, diffused lighting emphasizes its delicate texture and pale green color. The aesthetic is clean, minimalist, and deeply organic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIv6OGCVFnwckPGVltoMLux_McB0GRbGvLJlMyQmjo6w613_wkVRdzJMTXGhkfrf2NdsRNy05dkcHXy9YEu8GLtzAllpS5i2mcsGqsAAsPkddEycR7I7mygbOoyzhhqQMA5kKA_TnIjuQpAjamoDjb6xRfSLATZnBlMwZh0huF5cs5BZebqGSdC7lbtSuhO39-svMD_QsfUmcSy_2yndVzTvwhi4NaBqMJpHpM63NfWo1iWylWU-4YERh_olQTUyVdMuGpHJg5Nt_w"/>
+<div class="flex-grow">
+<h4 class="text-label-sm font-label-sm text-primary uppercase">白鼠尾草散葉</h4>
+<p class="text-body-md text-terracotta">NT$280</p>
+<button class="mt-2 px-4 py-1 border border-secondary/30 rounded-full text-[10px] uppercase tracking-widest hover:bg-moss hover:text-white transition-all">+ 加購</button>
+</div>
+</div>
+<!-- Mini Product 2 -->
+<div class="flex items-center gap-4 group cursor-pointer">
+<img class="w-20 h-20 object-cover rounded-xl grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Pieces of Palo Santo wood sticks arranged on a ceramic dish. The light is warm and inviting, suggesting a quiet afternoon meditation space. The texture of the wood grain is sharp and detailed." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCactQyK-z3qqs7v-vx170jO7JdDmUZAmZtolx2pc_Ud-f9qizFNnM634RS3RwI0_EU3NYOlQlroxwXDCtOt1mPRXGgreCX4elPCR0hI4W2uPAfnzd_twMjYxrbnuCslFS8LbiSnrjPPx9iflPja7XI__WWDTTnRdxhkBQOKMzEP5SquToL5EFZSpwFqbvdmBwBrK6u9qH2e6KBtmb29P3i1XlUlqjk9nL5zBTKJT3udBcl-GF0uCUw8QtqwDr1G8Bn4muNDEKu5V3F"/>
+<div class="flex-grow">
+<h4 class="text-label-sm font-label-sm text-primary uppercase">祕魯聖木條 (3入)</h4>
+<p class="text-body-md text-terracotta">NT$350</p>
+<button class="mt-2 px-4 py-1 border border-secondary/30 rounded-full text-[10px] uppercase tracking-widest hover:bg-moss hover:text-white transition-all">+ 加購</button>
+</div>
+</div>
+<!-- Mini Product 3 -->
+<div class="flex items-center gap-4 group cursor-pointer">
+<img class="w-20 h-20 object-cover rounded-xl grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="A single bundle of dried cedar branches wrapped in a dark natural cord. The background is a textured earthy plaster wall. The mood is ancient and protective, with deep forest green tones predominating." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqQK37RD0wA4Wo1LjCQg9ASdOs0HEGH3eMZvIkfDR29So4quXbo7jKlJQOqNlhvfDrm0yobC8P2w_XAEj-Xq0cO-2hwGLHoIKCsbZ2yLvQCHQwYR9AZeRXAM1JC-nMI3hax03JVrHG9udTk2VI9G37whHkJFGc1Qx-AMX_W8ffw58hRNxnO_6YSyRJrsqsrBlCuis8EjNTsSTnyI8a2OI_h1Swkf2Awl9leL3bsN9OQI24SHV6Z-Hxze925WPj-_hsTBa7Zo9a_sBu"/>
+<div class="flex-grow">
+<h4 class="text-label-sm font-label-sm text-primary uppercase">北非雪松束</h4>
+<p class="text-body-md text-terracotta">NT$420</p>
+<button class="mt-2 px-4 py-1 border border-secondary/30 rounded-full text-[10px] uppercase tracking-widest hover:bg-moss hover:text-white transition-all">+ 加購</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Section -->
+<section class="max-w-container-max mx-auto px-gutter py-24 border-b border-secondary/20">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+<div class="space-y-4">
+<span class="material-symbols-outlined text-[48px] text-secondary/40">replay</span>
+<h3 class="font-headline-md text-primary text-[1.5rem]">七天安心鑑賞期</h3>
+<p class="text-body-md text-on-surface-variant px-8">收到商品後若不符合預期，可享有完整售後退換貨保障。</p>
+</div>
+<div class="space-y-4">
+<span class="material-symbols-outlined text-[48px] text-secondary/40" style="font-variation-settings: 'FILL' 1;">support_agent</span>
+<h3 class="font-headline-md text-primary text-[1.5rem]">LINE@ 專人諮詢</h3>
+<p class="text-body-md text-on-surface-variant px-8">使用或搭配上有任何疑問，我們的芳療師隨時在線引導。</p>
+</div>
+<div class="space-y-4">
+<span class="material-symbols-outlined text-[48px] text-secondary/40">local_shipping</span>
+<h3 class="font-headline-md text-primary text-[1.5rem]">全程物流追蹤</h3>
+<p class="text-body-md text-on-surface-variant px-8">從包裝完成到抵達門市，您將收到即時簡訊與郵件通知。</p>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-gutter py-section-padding max-w-container-max mx-auto gap-8">
+<div class="flex flex-col items-center md:items-start gap-4">
+<h2 class="font-headline-md text-headline-md text-primary">森息日常</h2>
+<p class="text-on-surface-variant font-label-sm text-label-sm uppercase tracking-widest opacity-80">© 2024 森息日常. All rituals reserved.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-on-surface-variant font-label-sm text-label-sm uppercase tracking-widest hover:text-secondary transition-colors duration-500" href="#">Privacy</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm uppercase tracking-widest hover:text-secondary transition-colors duration-500" href="#">Terms</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm uppercase tracking-widest hover:text-secondary transition-colors duration-500" href="#">Shipping</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm uppercase tracking-widest hover:text-secondary transition-colors duration-500" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>

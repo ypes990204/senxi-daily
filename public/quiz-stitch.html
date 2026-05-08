@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-Hant"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&amp;family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary": "#ffffff",
+                    "surface-container": "#f0eee8",
+                    "surface-bright": "#fbf9f4",
+                    "on-primary-fixed": "#131f04",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#f3f1eb",
+                    "primary-fixed-dim": "#bccda1",
+                    "surface-container-high": "#eae8e3",
+                    "outline-variant": "#c6c8bb",
+                    "on-tertiary-fixed": "#231b06",
+                    "on-tertiary-fixed-variant": "#50462d",
+                    "surface-container-highest": "#e4e2dd",
+                    "secondary-container": "#feaa87",
+                    "error-container": "#ffdad6",
+                    "surface": "#fbf9f4",
+                    "surface-container-low": "#f5f3ee",
+                    "secondary-fixed-dim": "#ffb597",
+                    "on-error": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "inverse-primary": "#bccda1",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-container": "#daebbe",
+                    "error": "#ba1a1a",
+                    "secondary-fixed": "#ffdbcd",
+                    "on-background": "#1b1c19",
+                    "tertiary-fixed-dim": "#d5c5a5",
+                    "tertiary-container": "#71654a",
+                    "on-surface-variant": "#45483f",
+                    "primary": "#445331",
+                    "tertiary-fixed": "#f2e1c0",
+                    "surface-dim": "#dcdad5",
+                    "primary-container": "#5c6b47",
+                    "on-secondary-fixed": "#360f00",
+                    "on-surface": "#1b1c19",
+                    "on-secondary-container": "#793c21",
+                    "outline": "#76786e",
+                    "background": "#fbf9f4",
+                    "on-tertiary-container": "#f4e3c2",
+                    "primary-fixed": "#d8e9bc",
+                    "on-secondary-fixed-variant": "#71361c",
+                    "secondary": "#8e4d31",
+                    "inverse-surface": "#30312d",
+                    "on-error-container": "#93000a",
+                    "surface-tint": "#546340",
+                    "surface-variant": "#e4e2dd",
+                    "tertiary": "#584d34",
+                    "on-primary-fixed-variant": "#3d4b2a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "xl": "40px",
+                    "sm": "8px",
+                    "lg": "24px",
+                    "gutter": "24px",
+                    "unit": "4px",
+                    "md": "16px",
+                    "container-max": "1280px",
+                    "xxl": "64px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Outfit", "sans-serif"],
+                    "label-sm": ["DM Sans", "sans-serif"],
+                    "display-md": ["Outfit", "sans-serif"],
+                    "body-lg": ["DM Sans", "sans-serif"],
+                    "display-lg": ["Outfit", "sans-serif"],
+                    "accent-note": ["cursive"],
+                    "headline-lg": ["Outfit", "sans-serif"],
+                    "body-md": ["DM Sans", "sans-serif"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "label-sm": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "display-md": ["36px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "accent-note": ["20px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "headline-lg": ["28px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>.paper-texture {
+    background-color: #fbf9f4;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCM6lF0dnRTC93GjquNwGz-UiQ0ZeYt4QCWFzlTUgLMbaC38yhTfayEVsOIJm7_VZanb_2rZNnwgeco1aGm0Tva0W9zL6nOQZ6FBwGLooc9btwZC8x37lYUMU58LPDwV9AvCeV8e7TE9Hu4pBHtUXfq94Bl88RJLIT2mtvITQV79M-i_VJu1zkiEXtX1ofJo-1qUZdP-Ie7__2ft34RYJs37XfWvq5rhjTqIosXHAA0MvH8Mnf6BtDJbz5w1FlOfA61K2cFDu_3sv5_);
+    background-repeat: repeat
+    }
+.organic-blob {
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    border-radius: 40% 60% 70% 30%/40% 50% 60% 50%
+    }
+.custom-shadow {
+    box-shadow: 0 20px 40px -10px rgba(58, 46, 31, 0.08)
+    }
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }</style>
+</head>
+<body class="paper-texture text-on-surface font-body-md antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface-dim docked full-width top-0 sticky z-50 border-b border-secondary dark:border-secondary-container shadow-sm opacity-95">
+<nav class="flex justify-between items-center w-full px-lg max-w-container-max mx-auto py-sm">
+<div class="font-display-md text-display-md text-primary dark:text-primary-fixed font-extrabold tracking-tight">森息日常</div>
+<div class="hidden md:flex items-center gap-lg">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary font-body-md text-body-md transition-colors duration-300" href="#">全部商品</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary font-body-md text-body-md transition-colors duration-300" href="#">草本系列</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary font-body-md text-body-md transition-colors duration-300" href="#">水晶系列</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary font-body-md text-body-md transition-colors duration-300" href="#">能量草杖</a>
+<a class="text-secondary dark:text-secondary-fixed font-bold border-b-2 border-secondary font-body-md text-body-md" href="#">能量測試</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary font-body-md text-body-md transition-colors duration-300" href="#">關於我們</a>
+</div>
+<div class="flex items-center gap-md">
+<button class="p-xs text-primary dark:text-primary-fixed hover:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="p-xs text-primary dark:text-primary-fixed hover:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="max-w-container-max mx-auto px-gutter py-xxl">
+<!-- Hero Section -->
+<section class="text-center mb-xxl relative overflow-hidden">
+<div class="absolute -top-10 -right-20 w-64 h-64 bg-primary-fixed opacity-10 organic-blob"></div>
+<div class="relative z-10">
+<h1 class="font-display-lg text-display-lg text-primary mb-md">為你量身推薦・3 件搭配商品</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg max-w-2xl mx-auto italic">回答 3 個問題，60 秒得到專屬建議</p>
+<div class="inline-flex items-center gap-md bg-surface-container-low px-lg py-sm rounded-full custom-shadow">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-widest">Progress</span>
+<span class="font-headline-md text-headline-md text-primary">0 / 3</span>
+</div>
+</div>
+</section>
+<!-- Step 1: Mood -->
+<section class="mb-xxl max-w-4xl mx-auto bg-surface-container-lowest p-lg md:p-xxl rounded-xl custom-shadow">
+<div class="flex justify-between items-center mb-lg">
+<h2 class="font-headline-lg text-headline-lg text-primary flex items-center gap-sm">
+<span class="text-secondary font-bold">01.</span> 你最近的心情？
+                </h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">33%</span>
+</div>
+<div class="w-full h-1 bg-surface-container rounded-full mb-xl overflow-hidden">
+<div class="w-1/3 h-full bg-primary rounded-full"></div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-md">
+<button class="group p-lg bg-surface border border-outline-variant rounded-xl hover:border-primary hover:bg-primary-fixed-dim transition-all flex flex-col items-center gap-sm text-center">
+<span class="text-4xl mb-xs">😰</span>
+<span class="font-body-md text-body-md group-hover:font-bold">焦慮緊繃</span>
+</button>
+<button class="group p-lg bg-surface border border-outline-variant rounded-xl hover:border-primary hover:bg-primary-fixed-dim transition-all flex flex-col items-center gap-sm text-center">
+<span class="text-4xl mb-xs">☁️</span>
+<span class="font-body-md text-body-md group-hover:font-bold">低落沉重</span>
+</button>
+<button class="group p-lg bg-surface border border-outline-variant rounded-xl hover:border-primary hover:bg-primary-fixed-dim transition-all flex flex-col items-center gap-sm text-center">
+<span class="text-4xl mb-xs">🔋</span>
+<span class="font-body-md text-body-md group-hover:font-bold">疲憊耗竭</span>
+</button>
+<button class="group p-lg bg-surface border border-outline-variant rounded-xl hover:border-primary hover:bg-primary-fixed-dim transition-all flex flex-col items-center gap-sm text-center">
+<span class="text-4xl mb-xs">🔥</span>
+<span class="font-body-md text-body-md group-hover:font-bold">憤怒煩躁</span>
+</button>
+<button class="group p-lg bg-surface border border-outline-variant rounded-xl hover:border-primary hover:bg-primary-fixed-dim transition-all flex flex-col items-center gap-sm text-center">
+<span class="text-4xl mb-xs">🌿</span>
+<span class="font-body-md text-body-md group-hover:font-bold">平靜想沉澱</span>
+</button>
+<button class="group p-lg bg-surface border border-outline-variant rounded-xl hover:border-primary hover:bg-primary-fixed-dim transition-all flex flex-col items-center gap-sm text-center">
+<span class="text-4xl mb-xs">✨</span>
+<span class="font-body-md text-body-md group-hover:font-bold">喜悅想擴展</span>
+</button>
+<button class="group p-lg bg-surface border border-outline-variant rounded-xl hover:border-primary hover:bg-primary-fixed-dim transition-all flex flex-col items-center gap-sm text-center col-span-2 md:col-span-1">
+<span class="text-4xl mb-xs">🧭</span>
+<span class="font-body-md text-body-md group-hover:font-bold">迷茫不知方向</span>
+</button>
+</div>
+</section>
+<!-- Step 2: Luck -->
+<section class="mb-xxl max-w-4xl mx-auto bg-surface-container-lowest p-lg md:p-xxl rounded-xl custom-shadow border-2 border-primary-fixed">
+<div class="flex justify-between items-center mb-lg">
+<h2 class="font-headline-lg text-headline-lg text-primary flex items-center gap-sm">
+<span class="text-secondary font-bold">02.</span> 你目前的運氣狀態？
+                </h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">66%</span>
+</div>
+<div class="w-full h-1 bg-surface-container rounded-full mb-xl overflow-hidden">
+<div class="w-2/3 h-full bg-primary rounded-full"></div>
+</div>
+<div class="space-y-md">
+<button class="w-full text-left px-lg py-md bg-surface border border-outline-variant rounded-xl hover:border-secondary hover:bg-secondary-fixed transition-all flex items-center justify-between group">
+<span class="font-body-lg text-body-lg group-hover:text-secondary group-hover:font-bold">事事不順</span>
+<span class="material-symbols-outlined text-outline group-hover:text-secondary" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button class="w-full text-left px-lg py-md bg-surface border border-outline-variant rounded-xl hover:border-secondary hover:bg-secondary-fixed transition-all flex items-center justify-between group">
+<span class="font-body-lg text-body-lg group-hover:text-secondary group-hover:font-bold">桃花低迷</span>
+<span class="material-symbols-outlined text-outline group-hover:text-secondary" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button class="w-full text-left px-lg py-md bg-surface border border-outline-variant rounded-xl hover:border-secondary hover:bg-secondary-fixed transition-all flex items-center justify-between group">
+<span class="font-body-lg text-body-lg group-hover:text-secondary group-hover:font-bold">事業卡關</span>
+<span class="material-symbols-outlined text-outline group-hover:text-secondary" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button class="w-full text-left px-lg py-md bg-surface border border-outline-variant rounded-xl hover:border-secondary hover:bg-secondary-fixed transition-all flex items-center justify-between group">
+<span class="font-body-lg text-body-lg group-hover:text-secondary group-hover:font-bold">健康疲弱</span>
+<span class="material-symbols-outlined text-outline group-hover:text-secondary" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button class="w-full text-left px-lg py-md bg-surface border border-outline-variant rounded-xl hover:border-secondary hover:bg-secondary-fixed transition-all flex items-center justify-between group">
+<span class="font-body-lg text-body-lg group-hover:text-secondary group-hover:font-bold">轉換環境</span>
+<span class="material-symbols-outlined text-outline group-hover:text-secondary" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button class="w-full text-left px-lg py-md bg-surface border border-outline-variant rounded-xl hover:border-secondary hover:bg-secondary-fixed transition-all flex items-center justify-between group">
+<span class="font-body-lg text-body-lg group-hover:text-secondary group-hover:font-bold">開啟新計畫</span>
+<span class="material-symbols-outlined text-outline group-hover:text-secondary" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- Step 3: Zodiac -->
+<section class="mb-xxl max-w-4xl mx-auto bg-surface-container-lowest p-lg md:p-xxl rounded-xl custom-shadow relative">
+<div class="absolute -bottom-10 -left-10 w-48 h-48 bg-secondary-fixed opacity-10 organic-blob rotate-45"></div>
+<div class="flex justify-between items-center mb-lg">
+<h2 class="font-headline-lg text-headline-lg text-primary flex items-center gap-sm">
+<span class="text-secondary font-bold">03.</span> 你的星座？
+                </h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">100%</span>
+</div>
+<div class="w-full h-1 bg-surface-container rounded-full mb-xl overflow-hidden">
+<div class="w-full h-full bg-primary rounded-full"></div>
+</div>
+<div class="grid grid-cols-3 md:grid-cols-4 gap-md">
+<!-- Fire: Terracotta #C97D5D -> secondary -->
+<button class="p-md bg-surface border border-outline-variant rounded-xl hover:shadow-lg transition-all group">
+<div class="flex flex-col items-center gap-xs">
+<span class="material-symbols-outlined text-secondary" data-icon="flare">flare</span>
+<span class="font-body-md text-body-md font-bold">牡羊座</span>
+<span class="text-[10px] px-sm py-[2px] bg-secondary-container text-on-secondary-container rounded-full font-bold uppercase">Fire</span>
+</div>
+</button>
+<button class="p-md bg-surface border border-outline-variant rounded-xl hover:shadow-lg transition-all group">
+<div class="flex flex-col items-center gap-xs">
+<span class="material-symbols-outlined text-secondary" data-icon="flare">flare</span>
+<span class="font-body-md text-body-md font-bold">獅子座</span>
+<span class="text-[10px] px-sm py-[2px] bg-secondary-container text-on-secondary-container rounded-full font-bold uppercase">Fire</span>
+</div>
+</button>
+<button class="p-md bg-surface border border-outline-variant rounded-xl hover:shadow-lg transition-all group">
+<div class="flex flex-col items-center gap-xs">
+<span class="material-symbols-outlined text-secondary" data-icon="flare">flare</span>
+<span class="font-body-md text-body-md font-bold">射手座</span>
+<span class="text-[10px] px-sm py-[2px] bg-secondary-container text-on-secondary-container rounded-full font-bold uppercase">Fire</span>
+</div>
+</button>
+<!-- Earth: Moss #5C6B47 -> primary -->
+<button class="p-md bg-surface border border-outline-variant rounded-xl hover:shadow-lg transition-all group">
+<div class="flex flex-col items-center gap-xs">
+<span class="material-symbols-outlined text-primary" data-icon="eco">eco</span>
+<span class="font-body-md text-body-md font-bold">金牛座</span>
+<span class="text-[10px] px-sm py-[2px] bg-primary-container text-on-primary-container rounded-full font-bold uppercase">Earth</span>
+</div>
+</button>
+<button class="p-md bg-surface border border-outline-variant rounded-xl hover:shadow-lg transition-all group">
+<div class="flex flex-col items-center gap-xs">
+<span class="material-symbols-outlined text-primary" data-icon="eco">eco</span>
+<span class="font-body-md text-body-md font-bold">處女座</span>
+<span class="text-[10px] px-sm py-[2px] bg-primary-container text-on-primary-container rounded-full font-bold uppercase">Earth</span>
+</div>
+</button>
+<button class="p-md bg-surface border border-outline-variant rounded-xl hover:shadow-lg transition-all group">
+<div class="flex flex-col items-center gap-xs">
+<span class="material-symbols-outlined text-primary" data-icon="eco">eco</span>
+<span class="font-body-md text-body-md font-bold">魔羯座</span>
+<span class="text-[10px] px-sm py-[2px] bg-primary-container text-on-primary-container rounded-full font-bold uppercase">Earth</span>
+</div>
+</button>
+<!-- Air: Lavender -> tertiary -->
+<button class="p-md bg-surface border border-outline-variant rounded-xl hover:shadow-lg transition-all group">
+<div class="flex flex-col items-center gap-xs">
+<span class="material-symbols-outlined text-tertiary" data-icon="air">air</span>
+<span class="font-body-md text-body-md font-bold">雙子座</span>
+<span class="text-[10px] px-sm py-[2px] bg-tertiary-container text-on-tertiary-container rounded-full font-bold uppercase">Air</span>
+</div>
+</button>
+<button class="p-md bg-surface border border-outline-variant rounded-xl hover:shadow-lg transition-all group">
+<div class="flex flex-col items-center gap-xs">
+<span class="material-symbols-outlined text-tertiary" data-icon="air">air</span>
+<span class="font-body-md text-body-md font-bold">天秤座</span>
+<span class="text-[10px] px-sm py-[2px] bg-tertiary-container text-on-tertiary-container rounded-full font-bold uppercase">Air</span>
+</div>
+</button>
+<button class="p-md bg-surface border border-outline-variant rounded-xl hover:shadow-lg transition-all group">
+<div class="flex flex-col items-center gap-xs">
+<span class="material-symbols-outlined text-tertiary" data-icon="air">air</span>
+<span class="font-body-md text-body-md font-bold">水瓶座</span>
+<span class="text-[10px] px-sm py-[2px] bg-tertiary-container text-on-tertiary-container rounded-full font-bold uppercase">Air</span>
+</div>
+</button>
+<!-- Water: Sky Blue -> variant -->
+<button class="p-md bg-surface border border-outline-variant rounded-xl hover:shadow-lg transition-all group">
+<div class="flex flex-col items-center gap-xs">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="water_drop">water_drop</span>
+<span class="font-body-md text-body-md font-bold">巨蟹座</span>
+<span class="text-[10px] px-sm py-[2px] bg-surface-variant text-on-surface-variant rounded-full font-bold uppercase">Water</span>
+</div>
+</button>
+<button class="p-md bg-surface border border-outline-variant rounded-xl hover:shadow-lg transition-all group">
+<div class="flex flex-col items-center gap-xs">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="water_drop">water_drop</span>
+<span class="font-body-md text-body-md font-bold">天蠍座</span>
+<span class="text-[10px] px-sm py-[2px] bg-surface-variant text-on-surface-variant rounded-full font-bold uppercase">Water</span>
+</div>
+</button>
+<button class="p-md bg-surface border border-outline-variant rounded-xl hover:shadow-lg transition-all group">
+<div class="flex flex-col items-center gap-xs">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="water_drop">water_drop</span>
+<span class="font-body-md text-body-md font-bold">雙魚座</span>
+<span class="text-[10px] px-sm py-[2px] bg-surface-variant text-on-surface-variant rounded-full font-bold uppercase">Water</span>
+</div>
+</button>
+</div>
+</section>
+<!-- Divider with Herb Illustration -->
+<div class="flex justify-center items-center gap-md py-xxl opacity-30">
+<div class="h-px w-24 bg-primary"></div>
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="local_florist">local_florist</span>
+<div class="h-px w-24 bg-primary"></div>
+</div>
+<!-- Results Intro -->
+<section class="text-center mb-xxl">
+<h2 class="font-display-md text-display-md text-primary mb-md">你的專屬能量推薦</h2>
+<p class="font-body-lg text-body-lg text-secondary italic tracking-wide">
+                「針對於您當下的 <span class="font-bold underline underline-offset-4">焦慮緊繃</span> 狀態，以及需要補足的 <span class="font-bold underline underline-offset-4">健康能量</span>，我們為身為 <span class="font-bold underline underline-offset-4">雙魚座</span> 的您挑選了以下療癒組。」
+            </p>
+</section>
+<!-- Recommendations: 3 product cards -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-lg mb-xxl">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl custom-shadow overflow-hidden group flex flex-col">
+<div class="relative overflow-hidden aspect-square">
+<img alt="Lavender Herb" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A close-up aesthetic shot of dried lavender bundles and botanical herbs arranged on a rustic linen cloth. The lighting is warm and golden, evoking a cozy afternoon in a sun-drenched artisan studio. The overall palette features soft purples, muted greens, and creamy off-whites, maintaining a premium wellness boutique feel with organic textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-6GI09zZ1k3f2ykiUJ6NnV1mTld3mfdq6dnyI6DPOeg2Ta0xnG222Gc7dpK0JeU1w687nY2MGnYhn0GDFEOT-x3DEY2Y-_gZsTuD9P7_EAX6RRxvOeE2PyIAunn5eC87qeuOtixdQAZ9ZFHlSJNaKl3358XDlb3ohD0QgKXsOs7zUybHV6ywzDDU7bTBXu9NYTWHX2y1WRYnfpJHKH9MiRUe5snRYjyMWhpo4wElnCy7KCiY-ADIEoesoC0R8uUvpCTcj-SMpCHZB"/>
+<span class="absolute top-md left-md bg-secondary text-on-secondary px-md py-xs rounded-full font-label-sm text-label-sm font-bold shadow-md">為你推薦</span>
+</div>
+<div class="p-lg flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-primary mb-xs">薰衣草草本</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg">舒緩緊繃的神經，帶來如森林般的呼吸節奏。</p>
+<div class="mt-auto flex justify-between items-center">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">NT$320</span>
+<button class="bg-primary text-on-primary px-lg py-sm rounded-lg font-label-sm text-label-sm hover:bg-primary-container transition-colors flex items-center gap-xs">
+<span class="material-symbols-outlined text-sm" data-icon="add_shopping_cart">add_shopping_cart</span>
+                            加入購物車
+                        </button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl custom-shadow overflow-hidden group flex flex-col border-2 border-secondary-container">
+<div class="relative overflow-hidden aspect-square">
+<img alt="Amethyst Set" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A premium collection of deep purple amethyst crystals and raw stones arranged on a textured stone surface. The background is a warm parchment color with subtle organic shadows. The lighting highlights the crystalline facets and transparency of the stones, creating a sense of luxury and spiritual tranquility. Earthy tones and artisan craftsmanship are evident in the presentation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJYFMybVoqqQ0WU3O_ZzL2CDSn2EPBiW1dLVTASSiVVgO0IyX7xZ13URPdgqKOkhfNylL-ThML7f5-iV6GbphHxElWYDPG_gQ0PcISTppJiXorlTkbReXAfogGq2-R90sl4ESIqvxVPZFrbnkV5VnEzU1j0LeGzxDX61dKW3zkSmG1IYas96L-Nq9tGu3BixwCOk2cwcXtUKRfEwfABP9mLFm10_uGWAVIu7IFL1MMGBUxdT2BUwN4g8jx3NX6O7tJ8kTiMTJgvSwQ"/>
+<span class="absolute top-md left-md bg-secondary text-on-secondary px-md py-xs rounded-full font-label-sm text-label-sm font-bold shadow-md">命中注定</span>
+</div>
+<div class="p-lg flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-primary mb-xs">紫水晶套裝</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg">淨化磁場與提升靈感，最適合雙魚座的能量石。</p>
+<div class="mt-auto flex justify-between items-center">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">NT$1,280</span>
+<button class="bg-primary text-on-primary px-lg py-sm rounded-lg font-label-sm text-label-sm hover:bg-primary-container transition-colors flex items-center gap-xs">
+<span class="material-symbols-outlined text-sm" data-icon="add_shopping_cart">add_shopping_cart</span>
+                            加入購物車
+                        </button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl custom-shadow overflow-hidden group flex flex-col">
+<div class="relative overflow-hidden aspect-square">
+<img alt="Energy Wand" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A handcrafted smudge stick made of dried lavender and cedar wood, tied with organic cotton twine. It rests on a ceramic plate with a minimal leaf pattern. The lighting is soft and diffused, creating a serene, natural atmosphere. The color palette centers on earthy moss green, terracotta accents, and soft cream backgrounds, echoing a slow-craft artisan market aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHjB1IbaURniJcP1Z839T78TffgQYUtxruvV1UNyrBsjHtaupTGUQG3bMT89hP_4yWDnQHAoIo9Y8fX6xbt_SwM3SdbXPhjihinlWTDpl1cRvz4Nn1_nP_anGxkHkYDog0oToOIE0VEDA-02EGXVUeUSOnNzi9zWYuOxCMjvk-UrVQo9jX3IM7yhYlShNZePyioURDDD2M-SFimyKQPjTtYC11o6fdRKGj6CfPRBvB6YSJGiTRD1i0M0L3HWYrtccqvsdV2_y9vqnd"/>
+<span class="absolute top-md left-md bg-secondary text-on-secondary px-md py-xs rounded-full font-label-sm text-label-sm font-bold shadow-md">為你推薦</span>
+</div>
+<div class="p-lg flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-primary mb-xs">薰衣草+雪松能量草杖</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg">驅散沉重的負能量，為室內帶來潔淨的新風。</p>
+<div class="mt-auto flex justify-between items-center">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">NT$580</span>
+<button class="bg-primary text-on-primary px-lg py-sm rounded-lg font-label-sm text-label-sm hover:bg-primary-container transition-colors flex items-center gap-xs">
+<span class="material-symbols-outlined text-sm" data-icon="add_shopping_cart">add_shopping_cart</span>
+                            加入購物車
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing & CTA -->
+<section class="mb-xxl max-w-2xl mx-auto bg-surface-container-low p-xxl rounded-xl custom-shadow border border-outline-variant text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 p-lg opacity-10">
+<span class="material-symbols-outlined text-8xl" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<div class="relative z-10">
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-xs">組合原價 NT$2,180</p>
+<div class="flex justify-center items-baseline gap-sm mb-lg">
+<span class="font-display-md text-display-md text-secondary font-bold">優惠組合價 NT$2,071</span>
+<span class="font-label-sm text-label-sm bg-secondary-container text-on-secondary-container px-sm py-[2px] rounded font-bold">95折</span>
+</div>
+<button class="w-full bg-primary text-on-primary font-headline-md text-headline-md py-lg rounded-xl shadow-lg hover:shadow-xl hover:translate-y-[-2px] transition-all flex items-center justify-center gap-md">
+                    一次加入購物車
+                    <span class="material-symbols-outlined" data-icon="shopping_basket">shopping_basket</span>
+</button>
+<p class="mt-md font-body-md text-body-md text-on-surface-variant">結帳時自動套用折扣</p>
+</div>
+</section>
+<!-- Alternatives & Save -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-lg items-stretch">
+<div class="bg-surface-container-lowest p-lg rounded-xl custom-shadow border border-outline-variant">
+<h4 class="font-headline-md text-headline-md text-primary mb-lg flex items-center gap-xs">
+<span class="material-symbols-outlined" data-icon="published_with_changes">published_with_changes</span>
+                    如果你想替換
+                </h4>
+<div class="space-y-md">
+<div class="flex items-center gap-md p-md hover:bg-surface-container rounded-lg transition-colors cursor-pointer border border-transparent hover:border-outline-variant">
+<div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Rose Quartz" class="w-full h-full object-cover" data-alt="A rose quartz crystal heart shape resting on a piece of rustic wood. The lighting is soft and romantic, with a focus on the delicate pink hues of the stone. Muted green leaves are visible in the blurred background, reinforcing the earthy botanical theme of the brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrFCRwyJhxy2KfMXOUqqr7VrnYTJA3-QLgt96YpSv6oBfY0moN0iYnwTRoeGWtEvLglbg5Ygd6C75FQGRIY3CLqGuURmHDgJ-O9-bcRPvRBxGr7KEPxZC1jxX73sO-KTkErxezXFQ-3h6U_Ygi9b3d2o_PonHDwGgctcTQelHteFo-7hVXWdqIlZRbHu13Xijq7pof9WOXYaib88WNcBFMCK608MqVPOJZuP8y1hLWLngBHpwlHWhvsIOhxGxgsbhM2MPeqrT1E-6x"/>
+</div>
+<div class="flex-grow">
+<p class="font-bold text-on-surface">粉晶擴香石</p>
+<p class="text-xs text-on-surface-variant">提升桃花與自我關愛</p>
+</div>
+<span class="text-secondary font-bold">+$120</span>
+</div>
+<div class="flex items-center gap-md p-md hover:bg-surface-container rounded-lg transition-colors cursor-pointer border border-transparent hover:border-outline-variant">
+<div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+<img alt="White Sage" class="w-full h-full object-cover" data-alt="A bundle of dried white sage tied with a blue string, placed on a ceramic bowl. Gentle smoke drifts upwards in a bright, minimalist setting. The aesthetic is clean and spiritual, with a warm color palette of creams and soft greys. The lighting is natural and airy, perfect for a high-end wellness boutique." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFUN1usMvgAGcuBIO_ZJeVd6YXxFJ_3B5lMTB_iHd1TDYOAEvUbqR6EunK6M422Mr-KcLKbxZeb6FpDcUO_8mPNzrANxlXXpiZnJs-vrlyKmbP02o7CVNmtP_usvOx2M0SJH0Wx-GX9FgU0dlJFE0pqhF21OlUjBlGLc-_m3BnrcgurBTgUzSmrUUTOeikugjz4S8I4boolYFPFZkL3RvE-XOwmzZhsDt3wbx5p5ns6_D-qBn1tYvuSJRU73YiHewpjc_Szk8qWN-k"/>
+</div>
+<div class="flex-grow">
+<p class="font-bold text-on-surface">加州白鼠尾草</p>
+<p class="text-xs text-on-surface-variant">最強效的空間淨化</p>
+</div>
+<span class="text-secondary font-bold">+$0</span>
+</div>
+</div>
+</div>
+<div class="bg-primary text-on-primary p-lg rounded-xl custom-shadow flex flex-col justify-center items-center text-center">
+<h4 class="font-display-md text-display-md mb-md">保存測試結果</h4>
+<p class="font-body-md text-body-md mb-xl max-w-xs">登入後即可永久保存您的專屬能量報告，下次購買時享受會員專屬優惠。</p>
+<div class="flex flex-col w-full gap-md max-w-xs">
+<button class="bg-on-primary text-primary font-bold py-md rounded-lg hover:bg-primary-container hover:text-on-primary transition-all">
+                        登入保存
+                    </button>
+<button class="border border-on-primary text-on-primary font-bold py-md rounded-lg hover:bg-on-primary hover:text-primary transition-all">
+                        免費註冊
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-container-highest w-full rounded-t-xl mt-xxl">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-lg px-lg py-xxl max-w-container-max mx-auto">
+<div class="col-span-2 md:col-span-1">
+<div class="font-display-lg text-display-lg text-primary mb-md">森息日常</div>
+<p class="text-on-surface-variant font-body-md text-body-md">手作於台灣的靈魂香氛與能量器物，與你一同找回生活的節奏。</p>
+</div>
+<div>
+<h5 class="font-bold text-primary mb-md">探索商品</h5>
+<ul class="space-y-sm">
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors underline-offset-4 hover:underline" href="#">全部商品</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors underline-offset-4 hover:underline" href="#">草本系列</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors underline-offset-4 hover:underline" href="#">水晶系列</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors underline-offset-4 hover:underline" href="#">能量草杖</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold text-primary mb-md">顧客服務</h5>
+<ul class="space-y-sm">
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors underline-offset-4 hover:underline" href="#">客服支援</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors underline-offset-4 hover:underline" href="#">退換貨政策</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors underline-offset-4 hover:underline" href="#">聯絡我們</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold text-primary mb-md">品牌故事</h5>
+<ul class="space-y-sm">
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors underline-offset-4 hover:underline" href="#">關於我們</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors underline-offset-4 hover:underline" href="#">靈魂理念</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors underline-offset-4 hover:underline" href="#">Instagram</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors underline-offset-4 hover:underline" href="#">Facebook</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-outline-variant/30 max-w-container-max mx-auto px-lg py-lg text-center">
+<p class="text-on-surface-variant font-body-md text-body-md opacity-80">© 2026 森息日常 · 手作於台灣</p>
+</div>
+</footer>
+</body></html>

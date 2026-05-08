@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;600&family=DM+Serif+Display:ital@0;1&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,7 +6,7 @@
 
 :root {
   --font-sans: 'Noto Sans TC', sans-serif;
-  --font-serif: 'Noto Serif TC', serif;
+  --font-serif: 'DM Serif Display', 'Noto Serif TC', serif;
 }
 
 * {
@@ -18,26 +18,40 @@ html {
 }
 
 body {
-  background-color: #FAF6F1;
-  color: #2C1810;
+  background-color: #F7F1E8;
+  color: #3A2E1F;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
 }
 
 @layer components {
+  /* 主 CTA：苔蘚綠 */
   .btn-primary {
-    @apply bg-brown text-cream px-6 py-3 text-sm tracking-widest hover:bg-brown-mid transition-colors duration-200;
+    @apply bg-moss text-cream px-7 py-3 text-sm tracking-wider rounded hover:bg-moss-dark transition-colors duration-200 inline-flex items-center justify-center;
   }
 
+  /* 強調 CTA：陶土橘（用於能量測試等） */
+  .btn-accent {
+    @apply bg-terracotta text-white px-7 py-3 text-sm tracking-wider rounded hover:bg-terracotta-dark transition-colors duration-200 inline-flex items-center justify-center;
+  }
+
+  /* 外框按鈕 */
   .btn-outline {
-    @apply border border-brown text-brown px-6 py-3 text-sm tracking-widest hover:bg-brown hover:text-cream transition-colors duration-200;
+    @apply border border-moss text-moss px-7 py-3 text-sm tracking-wider rounded hover:bg-moss hover:text-cream transition-colors duration-200 inline-flex items-center justify-center;
   }
 
+  /* 標題 */
   .section-title {
-    @apply font-serif text-2xl md:text-3xl text-brown tracking-wide;
+    @apply font-serif text-3xl md:text-4xl text-earth tracking-wide;
   }
 
+  /* 表單欄位 */
   .input-field {
-    @apply w-full border border-sand bg-white px-4 py-3 text-sm text-brown placeholder-tan focus:outline-none focus:border-brown transition-colors;
+    @apply w-full border border-sand-beige bg-cream-soft px-4 py-3 text-sm text-earth placeholder-stone focus:outline-none focus:border-moss rounded transition-colors;
+  }
+
+  /* 商品卡 */
+  .product-card {
+    @apply bg-cream-soft rounded-lg overflow-hidden hover:shadow-soft-lg transition-shadow duration-300;
   }
 }
