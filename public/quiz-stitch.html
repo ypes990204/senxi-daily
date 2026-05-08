@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html class="light" lang="zh-Hant"><head>
 <meta charset="utf-8"/>
@@ -124,11 +124,11 @@
 <nav class="flex justify-between items-center w-full px-lg max-w-container-max mx-auto py-sm">
 <div class="font-display-md text-display-md text-primary dark:text-primary-fixed font-extrabold tracking-tight">森息日常</div>
 <div class="hidden md:flex items-center gap-lg">
-<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary font-body-md text-body-md transition-colors duration-300" href="#">全部商品</a>
-<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary font-body-md text-body-md transition-colors duration-300" href="#">草本系列</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary font-body-md text-body-md transition-colors duration-300" href="/products">全部商品</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary font-body-md text-body-md transition-colors duration-300" href="/products">草本系列</a>
 <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary font-body-md text-body-md transition-colors duration-300" href="#">水晶系列</a>
-<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary font-body-md text-body-md transition-colors duration-300" href="#">能量草杖</a>
-<a class="text-secondary dark:text-secondary-fixed font-bold border-b-2 border-secondary font-body-md text-body-md" href="#">能量測試</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary font-body-md text-body-md transition-colors duration-300" href="/products">能量草杖</a>
+<a class="text-secondary dark:text-secondary-fixed font-bold border-b-2 border-secondary font-body-md text-body-md" href="/quiz">能量測試</a>
 <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary font-body-md text-body-md transition-colors duration-300" href="#">關於我們</a>
 </div>
 <div class="flex items-center gap-md">
@@ -479,10 +479,10 @@
 <div>
 <h5 class="font-bold text-primary mb-md">探索商品</h5>
 <ul class="space-y-sm">
-<li><a class="text-on-surface-variant hover:text-secondary transition-colors underline-offset-4 hover:underline" href="#">全部商品</a></li>
-<li><a class="text-on-surface-variant hover:text-secondary transition-colors underline-offset-4 hover:underline" href="#">草本系列</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors underline-offset-4 hover:underline" href="/products">全部商品</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors underline-offset-4 hover:underline" href="/products">草本系列</a></li>
 <li><a class="text-on-surface-variant hover:text-secondary transition-colors underline-offset-4 hover:underline" href="#">水晶系列</a></li>
-<li><a class="text-on-surface-variant hover:text-secondary transition-colors underline-offset-4 hover:underline" href="#">能量草杖</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors underline-offset-4 hover:underline" href="/products">能量草杖</a></li>
 </ul>
 </div>
 <div>
@@ -507,4 +507,54 @@
 <p class="text-on-surface-variant font-body-md text-body-md opacity-80">© 2026 森息日常 · 手作於台灣</p>
 </div>
 </footer>
+
+<script>
+(function () {
+  const map = [
+    ['開始能量測試', '/quiz'],
+    ['先測你的能量', '/quiz'],
+    ['測你的能量', '/quiz'],
+    ['探索全系列', '/products'],
+    ['選購全系列', '/products'],
+    ['看 9 款配方', '/products'],
+    ['看全部商品', '/products'],
+    ['立即訂購', '/checkout'],
+    ['立即購物', '/products'],
+    ['立即購買', '/checkout'],
+    ['註冊', '/auth/register'],
+    ['登入', '/auth/login'],
+    ['加入森息會員', '/auth/register'],
+    ['加入森息日記', '/'],
+    ['了解更多', '/'],
+    ['返回首頁', '/'],
+    ['繼續購物', '/products'],
+    ['查看訂單', '/auth/login'],
+    ['看搭配建議', '/quiz'],
+    ['一次加入購物車', '/checkout'],
+    ['一次帶走', '/checkout'],
+    ['確認訂單並付款', '/checkout'],
+    ['確認付款', '/checkout'],
+  ]
+  const route = (txt) => {
+    for (const [needle, dest] of map) {
+      if (txt.includes(needle)) return dest
+    }
+    return null
+  }
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('button, a[href="#"]').forEach((el) => {
+      const txt = (el.textContent || '').trim()
+      if (!txt) return
+      const dest = route(txt)
+      if (dest) {
+        el.style.cursor = 'pointer'
+        el.addEventListener('click', (e) => {
+          e.preventDefault()
+          window.location.href = dest
+        })
+      }
+    })
+  })
+})()
+</script>
 </body></html>
