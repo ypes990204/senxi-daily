@@ -1,0 +1,279 @@
+﻿<!DOCTYPE html>
+
+<html lang="zh-Hant"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&amp;family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.organic-blob {
+    clip-path: circle(50% at 50% 50%);
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%
+    }
+.paper-texture {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBguWnFCvvYsNiGtMsei0J6TcFNYq8E1F4oYjA65s417Ei4ViUYA1qy7GWQRzp2xsBeTRYm9YZZQrUj73xNd68rMEj3HBBZXLXXAd1Osii5DNcy0CP1oLnDolLZSNPLATEVNSflHleUvs2eFywtZU_ZeBRxvE_5k9-s0no2hJBWvUEWCuUWuk8LpZrN9N7ERfYW92WsW7gdqbFOAWUSpNJXVGHcupm1OzrEzDlQs6Eg6SOThcxCoJptO-zRrQpuKE4LS_JZPGPCcrrj)
+    }</style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "background": "#fbf9f4",
+                    "on-secondary-fixed": "#360f00",
+                    "primary": "#445331",
+                    "tertiary": "#584d34",
+                    "inverse-surface": "#30312d",
+                    "tertiary-fixed": "#f2e1c0",
+                    "tertiary-container": "#71654a",
+                    "on-primary-fixed-variant": "#3d4b2a",
+                    "outline": "#76786e",
+                    "on-surface-variant": "#45483f",
+                    "surface-variant": "#e4e2dd",
+                    "on-tertiary-fixed": "#231b06",
+                    "tertiary-fixed-dim": "#d5c5a5",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed": "#ffdbcd",
+                    "on-surface": "#1b1c19",
+                    "secondary": "#8e4d31",
+                    "surface-bright": "#fbf9f4",
+                    "secondary-container": "#feaa87",
+                    "on-primary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-background": "#1b1c19",
+                    "error": "#ba1a1a",
+                    "surface-container-high": "#eae8e3",
+                    "on-secondary-fixed-variant": "#71361c",
+                    "surface-tint": "#546340",
+                    "surface": "#fbf9f4",
+                    "on-secondary-container": "#793c21",
+                    "surface-dim": "#dcdad5",
+                    "surface-container-low": "#f5f3ee",
+                    "on-primary-container": "#daebbe",
+                    "on-tertiary-fixed-variant": "#50462d",
+                    "primary-fixed-dim": "#bccda1",
+                    "primary-fixed": "#d8e9bc",
+                    "primary-container": "#5c6b47",
+                    "surface-container": "#f0eee8",
+                    "on-tertiary-container": "#f4e3c2",
+                    "on-error": "#ffffff",
+                    "surface-container-highest": "#e4e2dd",
+                    "secondary-fixed-dim": "#ffb597",
+                    "inverse-primary": "#bccda1",
+                    "outline-variant": "#c6c8bb",
+                    "on-secondary": "#ffffff",
+                    "inverse-on-surface": "#f3f1eb",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed": "#131f04",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "4px",
+                    "md": "16px",
+                    "xxl": "64px",
+                    "xs": "4px",
+                    "lg": "24px",
+                    "xl": "40px",
+                    "container-max": "1280px",
+                    "sm": "8px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["outfit"],
+                    "display-md": ["outfit"],
+                    "body-md": ["dmSans"],
+                    "body-lg": ["dmSans"],
+                    "accent-note": ["cursive"],
+                    "headline-md": ["outfit"],
+                    "display-lg": ["outfit"],
+                    "label-sm": ["dmSans"]
+            },
+            "fontSize": {
+                    "headline-lg": ["28px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "display-md": ["36px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "accent-note": ["20px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "label-sm": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md paper-texture">
+<!-- 1. Announcement Bar -->
+<div class="bg-secondary text-on-secondary px-lg py-sm text-center font-label-sm tracking-widest">
+        🌿 首購會員 9 折 · 滿 NT$1,500 免運 · 加入 LINE@ 領能量測試優惠碼
+    </div>
+<!-- 2. Navbar -->
+<nav class="bg-surface sticky top-0 z-50 shadow-sm opacity-95 border-b border-secondary">
+<div class="flex justify-between items-center w-full px-lg max-w-container-max mx-auto py-sm">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary text-display-md">eco</span>
+<span class="font-display-md text-display-md text-primary">森息日常</span>
+</div>
+<div class="hidden md:flex gap-lg items-center">
+<a class="text-secondary font-bold border-b-2 border-secondary font-body-md" href="#">首頁</a>
+<div class="group relative py-md">
+<button class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1 font-body-md">
+                        全部商品 <span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<div class="absolute top-full left-0 hidden group-hover:block bg-surface-container-low shadow-xl rounded-xl p-md min-w-[160px]">
+<a class="block py-2 text-on-surface hover:text-primary" href="/products/herbs">草本系列</a>
+<a class="block py-2 text-on-surface hover:text-primary" href="/products/crystal-sets">水晶套裝</a>
+<a class="block py-2 text-on-surface hover:text-primary" href="/products/energy-wands">能量草杖</a>
+</div>
+</div>
+<a class="text-secondary font-bold hover:scale-95 transition-transform font-body-md" href="/quiz">能量測試✨</a>
+<a class="text-on-surface-variant hover:text-primary font-body-md transition-colors" href="/about">品牌故事</a>
+<a class="text-on-surface-variant hover:text-primary font-body-md transition-colors" href="/journal">日記專欄</a>
+</div>
+<div class="flex items-center gap-md text-primary">
+<button class="material-symbols-outlined hover:scale-110 transition-transform">search</button>
+<button class="material-symbols-outlined hover:scale-110 transition-transform">person</button>
+<button class="relative hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute -top-2 -right-2 bg-secondary text-on-secondary text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">3</span>
+</button>
+</div>
+</div>
+</nav>
+
+<section class="max-w-3xl mx-auto px-6 py-20 text-center">
+  <div class="w-24 h-24 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center">
+    <span class="material-symbols-outlined text-on-primary text-6xl">check</span>
+  </div>
+  <h1 class="font-display-md text-display-md text-on-surface mb-4">謝謝你 · 訂單已成立</h1>
+  <p class="text-on-surface-variant font-body-lg mb-12">我們會在 3 天內以 LINE 通知你付款方式</p>
+
+  <div class="bg-surface-container-lowest rounded-xl p-8 mb-10 text-left">
+    <div class="flex justify-between items-center mb-4 pb-4 border-b border-surface-variant">
+      <div><p class="text-tertiary text-sm">訂單編號</p><p class="font-bold text-on-surface">#SX-2026-1024</p></div>
+      <div class="text-right"><p class="text-tertiary text-sm">訂購日期</p><p class="font-bold text-on-surface">2026-05-08</p></div>
+    </div>
+    <div class="space-y-3 mb-4">
+      <div class="flex items-center gap-4"><img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=100" class="w-12 h-12 rounded object-cover" alt=""><div class="flex-1"><p class="font-bold text-sm text-on-surface">薰衣草+雪松+白鼠尾草+聖木 草杖</p><p class="text-xs text-tertiary">× 1 · NT$880</p></div></div>
+      <div class="flex items-center gap-4"><img src="https://images.unsplash.com/photo-1567632630891-38b39c12e1a0?w=100" class="w-12 h-12 rounded object-cover" alt=""><div class="flex-1"><p class="font-bold text-sm text-on-surface">紫水晶原石套裝</p><p class="text-xs text-tertiary">× 1 · NT$1,280</p></div></div>
+      <div class="flex items-center gap-4"><img src="https://images.unsplash.com/photo-1499002238440-d264edd596ec?w=100" class="w-12 h-12 rounded object-cover" alt=""><div class="flex-1"><p class="font-bold text-sm text-on-surface">薰衣草</p><p class="text-xs text-tertiary">× 2 · NT$520</p></div></div>
+    </div>
+    <div class="pt-4 border-t border-surface-variant flex justify-between items-baseline">
+      <span class="text-on-surface-variant">應付總額</span>
+      <span class="font-display-md text-display-md text-secondary">NT$2,660</span>
+    </div>
+  </div>
+
+  <div class="bg-tertiary-fixed rounded-xl p-8 mb-10 text-left">
+    <h3 class="font-headline-md text-headline-md text-on-surface mb-6 text-center">接下來會發生什麼</h3>
+    <div class="space-y-4">
+      <div class="flex items-start gap-4"><div class="w-8 h-8 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">✓</div><div><p class="font-bold text-on-surface">我們收到訂單</p><p class="text-sm text-on-surface-variant">已完成 · 2026-05-08 22:34</p></div></div>
+      <div class="flex items-start gap-4"><div class="w-8 h-8 bg-secondary text-on-secondary rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">2</div><div><p class="font-bold text-on-surface">LINE@ 客服聯繫付款方式</p><p class="text-sm text-on-surface-variant">3 個工作天內</p></div></div>
+      <div class="flex items-start gap-4"><div class="w-8 h-8 bg-surface-container-low text-on-surface-variant rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">3</div><div><p class="font-bold text-on-surface">付款完成後備貨</p><p class="text-sm text-on-surface-variant">3-5 個工作天</p></div></div>
+      <div class="flex items-start gap-4"><div class="w-8 h-8 bg-surface-container-low text-on-surface-variant rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">4</div><div><p class="font-bold text-on-surface">出貨並寄送追蹤碼</p><p class="text-sm text-on-surface-variant">估計 2026-05-22 前送達</p></div></div>
+    </div>
+  </div>
+
+  <div class="bg-secondary-container rounded-xl p-8 mb-10 text-left">
+    <h3 class="font-headline-md text-headline-md text-on-surface mb-3">分享給朋友享 9 折</h3>
+    <p class="text-on-surface-variant text-sm mb-4">你的專屬優惠碼</p>
+    <div class="flex gap-2">
+      <code class="flex-1 bg-surface-container-lowest rounded-lg p-4 font-mono font-bold text-on-surface text-center">FRIEND-ABC123</code>
+      <button class="bg-secondary text-on-secondary px-6 rounded-lg font-bold">複製</button>
+    </div>
+  </div>
+
+  <div class="flex flex-wrap gap-3 justify-center">
+    <a href="/" class="border border-primary text-primary px-8 py-3 rounded-lg font-bold hover:bg-primary hover:text-on-primary transition-colors">返回首頁</a>
+    <a href="/products" class="bg-primary text-on-primary px-8 py-3 rounded-lg font-bold hover:bg-on-primary-fixed-variant transition-colors">繼續購物</a>
+  </div>
+</section>
+<!-- 12. Footer -->
+<footer class="bg-surface-container-low rounded-t-xl py-xxl border-t border-surface-variant">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-lg px-lg max-w-container-max mx-auto mb-xl">
+<div>
+<h3 class="font-display-md text-display-md text-primary mb-lg">森息日常</h3>
+<p class="text-on-surface-variant mb-md font-body-md">手作於台灣山林<br/>傳遞土地最溫暖的呼吸</p>
+<div class="flex gap-md">
+<a class="text-primary hover:text-secondary" href="#"><span class="material-symbols-outlined">social_leaderboard</span></a>
+<a class="text-primary hover:text-secondary" href="#"><span class="material-symbols-outlined">photo_camera</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-primary mb-md">探索森息</h4>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="/products">全部商品</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="/quiz">能量測試</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="/products/energy-wands">能量草杖</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="/about">品牌故事</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-primary mb-md">客戶服務</h4>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">客服支援</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">退換貨政策</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">聯絡我們</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="#">常見問題</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-primary mb-md">門市資訊</h4>
+<ul class="space-y-2">
+<li class="text-on-surface-variant font-body-md">台北工作室 (預約制)</li>
+<li class="text-on-surface-variant font-body-md">週一至週五 10:00 - 18:00</li>
+<li class="flex items-center gap-md mt-md">
+<span class="material-symbols-outlined text-sm">payments</span>
+<span class="material-symbols-outlined text-sm">credit_card</span>
+<span class="material-symbols-outlined text-sm">local_shipping</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-lg pt-xl border-t border-surface-variant text-center text-on-surface-variant font-label-sm">
+            © 2026 森息日常 · 手作於台灣 · All Rights Reserved.
+        </div>
+</footer>
+
+
+<script>
+(function () {
+  const map = [
+    ['開始能量測試', '/quiz'],['先測你的能量', '/quiz'],['測你的能量', '/quiz'],['做能量測試', '/quiz'],
+    ['探索全系列', '/products'],['選購全系列', '/products'],
+    ['看 9 款配方', '/products/energy-wands'],['看 能量草杖系列', '/products/energy-wands'],['看全部商品', '/products'],
+    ['立即訂購', '/checkout'],['立即購物', '/products'],['立即購買', '/checkout'],
+    ['迎請套組', '/checkout'],['加入購物車', null],
+    ['註冊', '/auth/register'],['登入', '/auth/login'],
+    ['加入森息會員', '/auth/register'],['加入森息日記', '/'],
+    ['了解更多', '/about'],['返回首頁', '/'],['繼續購物', '/products'],
+    ['查看訂單', '/account'],['看搭配建議', '/quiz'],['繼續閱讀', null],
+    ['一次加入購物車', '/checkout'],['一次帶走', '/checkout'],
+    ['確認訂單並付款', '/checkout'],['確認付款', '/checkout'],
+    ['更新資料', null],['複製', null],['訂閱', null],
+  ]
+  const route = (txt) => { for (const [n, d] of map) { if (txt.includes(n)) return d } return null }
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('button, a[href="#"]').forEach((el) => {
+      const txt = (el.textContent || '').trim(); if (!txt) return
+      const dest = route(txt); if (dest) {
+        el.style.cursor = 'pointer'
+        el.addEventListener('click', (e) => { e.preventDefault(); window.location.href = dest })
+      }
+    })
+  })
+})()
+</script>
+
+</body></html>

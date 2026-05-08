@@ -1,0 +1,29 @@
+
+<script>
+(function () {
+  const map = [
+    ['開始能量測試', '/quiz'],['先測你的能量', '/quiz'],['測你的能量', '/quiz'],['做能量測試', '/quiz'],
+    ['探索全系列', '/products'],['選購全系列', '/products'],
+    ['看 9 款配方', '/products/energy-wands'],['看 能量草杖系列', '/products/energy-wands'],['看全部商品', '/products'],
+    ['立即訂購', '/checkout'],['立即購物', '/products'],['立即購買', '/checkout'],
+    ['迎請套組', '/checkout'],['加入購物車', null],
+    ['註冊', '/auth/register'],['登入', '/auth/login'],
+    ['加入森息會員', '/auth/register'],['加入森息日記', '/'],
+    ['了解更多', '/about'],['返回首頁', '/'],['繼續購物', '/products'],
+    ['查看訂單', '/account'],['看搭配建議', '/quiz'],['繼續閱讀', null],
+    ['一次加入購物車', '/checkout'],['一次帶走', '/checkout'],
+    ['確認訂單並付款', '/checkout'],['確認付款', '/checkout'],
+    ['更新資料', null],['複製', null],['訂閱', null],
+  ]
+  const route = (txt) => { for (const [n, d] of map) { if (txt.includes(n)) return d } return null }
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('button, a[href="#"]').forEach((el) => {
+      const txt = (el.textContent || '').trim(); if (!txt) return
+      const dest = route(txt); if (dest) {
+        el.style.cursor = 'pointer'
+        el.addEventListener('click', (e) => { e.preventDefault(); window.location.href = dest })
+      }
+    })
+  })
+})()
+</script>
